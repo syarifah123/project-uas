@@ -1,0 +1,522 @@
+[
+    {
+        "id": 1,
+        "title": "Software Engineer",
+        "company": "Tech Innovate Inc.",
+        "location": "Jakarta, Indonesia",
+        "salary": {
+            "min": "7500000",
+            "max": "10000000"
+        },
+        "requirements": {
+            "education": "S1 Teknik Informatika atau setara",
+            "experience": "Minimal 2 tahun pengalaman dalam pengembangan perangkat lunak",
+            "skills": [
+                "JavaScript",
+                "React",
+                "Node.js"
+            ]
+        },
+        "description": "Bertanggung jawab atas pengembangan dan pemeliharaan aplikasi berbasis web.",
+        "benefits": [
+            "Asuransi kesehatan",
+            "Bonus tahunan",
+            "Work from home opsional"
+        ],
+        "image": "https://teentrust.ng/wp-content/uploads/2025/02/cyber_security_vs_software_engineering-800x477.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Data Analyst",
+        "company": "Data Insight Solutions",
+        "location": "Bandung, Indonesia",
+        "salary": {
+            "min": "12000000",
+            "max": "18000000"
+        },
+        "requirements": {
+            "education": "S1 Statistik, Matematika, atau Ilmu Komputer",
+            "experience": "Minimal 1 tahun pengalaman dalam analisis data",
+            "skills": [
+                "Python",
+                "SQL",
+                "Tableau"
+            ]
+        },
+        "description": "Menganalisis data dan membuat laporan untuk mendukung pengambilan keputusan bisnis.",
+        "benefits": [
+            "Tunjangan transportasi",
+            "Program pelatihan",
+            "Bonus kinerja"
+        ],
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK7lI0nkB_MmdDNwtD2_ID914PvFu0Xxr5WU8u3GOOWT0LqiHK33Vf65TMbru4EqJWYXE&usqp=CAU"
+    },
+    {
+        "id": 3,
+        "title": "Digital Marketing Specialist",
+        "company": "Creative Media Agency",
+        "location": "Surabaya, Indonesia",
+        "salary": {
+            "min": "10000000",
+            "max": "15000000"
+        },
+        "requirements": {
+            "education": "S1 Pemasaran atau Komunikasi",
+            "experience": "Minimal 3 tahun pengalaman dalam pemasaran digital",
+            "skills": [
+                "SEO",
+                "Google Ads",
+                "Social Media Marketing"
+            ]
+        },
+        "description": "Merancang dan menjalankan strategi pemasaran digital untuk meningkatkan brand awareness.",
+        "benefits": [
+            "Asuransi jiwa",
+            "Bonus proyek",
+            "Jam kerja fleksibel"
+        ],
+        "image": "https://mediabangsa.co.id/wp-content/uploads/2022/10/01705083715Digital-marketing-itu-apa.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Mobile App Developer",
+        "company": "Innovate Mobile",
+        "location": "Jakarta, Indonesia",
+        "salary": {
+            "min": "8000000",
+            "max": "12000000"
+        },
+        "requirements": {
+            "education": "S1 Teknik Informatika atau setara",
+            "experience": "Minimal 2 tahun pengalaman dalam pengembangan aplikasi mobile",
+            "skills": [
+                "Flutter",
+                "React Native",
+                "Kotlin"
+            ]
+        },
+        "description": "Mengembangkan dan memelihara aplikasi mobile untuk platform Android dan iOS.",
+        "benefits": [
+            "Asuransi kesehatan",
+            "Bonus tahunan",
+            "Work from home opsional"
+        ],
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvqmw6sjoz1FG5t_r8Og40uHTacY_BXmruDQ&s"
+    },
+    {
+        "id": 5,
+        "title": "Backend Developer",
+        "company": "Cloud Solutions",
+        "location": "Yogyakarta, Indonesia",
+        "salary": {
+            "min": "9000000",
+            "max": "13000000"
+        },
+        "requirements": {
+            "education": "S1 Teknik Informatika atau setara",
+            "experience": "Minimal 3 tahun pengalaman dalam pengembangan backend",
+            "skills": [
+                "Node.js",
+                "Go",
+                "MongoDB"
+            ]
+        },
+        "description": "Membangun dan mengelola sistem backend yang skalabel dan efisien.",
+        "benefits": [
+            "Tunjangan kesehatan",
+            "Work from anywhere",
+            "Bonus kinerja"
+        ],
+        "image": "https://geekgarden.id/wp-content/uploads/2024/07/backend-developer.webp"
+    },
+    {
+        "id": 6,
+        "title": "Frontend Developer",
+        "company": "Visionary Tech",
+        "location": "Jakarta, Indonesia",
+        "salary": {
+            "min": "8500000",
+            "max": "12000000"
+        },
+        "requirements": {
+            "education": "S1 Teknik Informatika atau setara",
+            "experience": "Minimal 2 tahun pengalaman dalam pengembangan frontend",
+            "skills": [
+                "React.js",
+                "Vue.js",
+                "Tailwind CSS"
+            ]
+        },
+        "description": "Mengembangkan antarmuka pengguna yang responsif dan interaktif.",
+        "benefits": [
+            "Asuransi kesehatan",
+            "Bonus tahunan",
+            "Remote working opsional"
+        ],
+        "image": "https://media.licdn.com/dms/image/v2/D5612AQFfhTEictqBHA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1721174916441?e=2147483647&v=beta&t=IqnGNJxS4J-yaL4rgLBlx-cbNAbFwpEMCRvkkLXsR48"
+    },
+    {
+        "id": 7,
+        "title": "Cyber Security Analyst",
+        "company": "SecureTech",
+        "location": "Jakarta, Indonesia",
+        "salary": {
+            "min": "15000000",
+            "max": "20000000"
+        },
+        "requirements": {
+            "education": "S1 Teknik Informatika atau setara",
+            "experience": "Minimal 3 tahun pengalaman dalam keamanan siber",
+            "skills": [
+                "Penetration Testing",
+                "Network Security",
+                "SIEM Tools"
+            ]
+        },
+        "description": "Menganalisis dan meningkatkan sistem keamanan perusahaan.",
+        "benefits": [
+            "Asuransi kesehatan",
+            "Bonus tahunan",
+            "Work from anywhere"
+        ],
+        "image": "https://almaata.ac.id/wp-content/uploads/2024/08/e6ec86d140147e8dc72514dbd2af546f.jpg"
+    },
+    {
+        "id": 8,
+        "title": "DevOps Engineer",
+        "company": "CloudOps Indonesia",
+        "location": "Bandung, Indonesia",
+        "salary": {
+            "min": "13000000",
+            "max": "18000000"
+        },
+        "requirements": {
+            "education": "S1 Teknik Informatika atau setara",
+            "experience": "Minimal 2 tahun pengalaman dalam DevOps",
+            "skills": [
+                "Docker",
+                "Kubernetes",
+                "CI/CD"
+            ]
+        },
+        "description": "Mengelola dan mengotomatisasi infrastruktur cloud.",
+        "benefits": [
+            "Remote working",
+            "Bonus tahunan",
+            "Asuransi kesehatan"
+        ],
+        "image": "https://ares.decipherzone.com/blog-manager/uploads/banner_webp_51ddbe10-6b83-4d6c-b762-ab26ab3a62b9.webp"
+    },
+    {
+        "id": 9,
+        "title": "Product Manager",
+        "company": "NextGen Tech",
+        "location": "Jakarta, Indonesia",
+        "salary": {
+            "min": "20000000",
+            "max": "30000000"
+        },
+        "requirements": {
+            "education": "S1 Manajemen atau Teknik Informatika",
+            "experience": "Minimal 4 tahun pengalaman sebagai Product Manager",
+            "skills": [
+                "Product Strategy",
+                "Agile Methodology",
+                "Market Research"
+            ]
+        },
+        "description": "Memimpin pengembangan produk dan strategi bisnis.",
+        "benefits": [
+            "Saham perusahaan",
+            "Asuransi kesehatan",
+            "Bonus tahunan"
+        ],
+        "image": "https://hattahimawan.com/wp-content/uploads/2023/02/WSB_Prod_Management_Tech_header-1024x683-1.jpg"
+    },
+    {
+        "id": 10,
+        "title": "UI/UX Designer",
+        "company": "Creative Studio",
+        "location": "Surabaya, Indonesia",
+        "salary": {
+            "min": "9000000",
+            "max": "14000000"
+        },
+        "requirements": {
+            "education": "S1 Desain Grafis atau setara",
+            "experience": "Minimal 2 tahun pengalaman dalam UI/UX",
+            "skills": [
+                "Figma",
+                "Adobe XD",
+                "Design Thinking"
+            ]
+        },
+        "description": "Mendesain antarmuka yang menarik dan mudah digunakan.",
+        "benefits": [
+            "Jam kerja fleksibel",
+            "Bonus proyek",
+            "Asuransi kesehatan"
+        ],
+        "image": "https://dashboard.primakara.ac.id/uploads/small_Tips_Belajar_UI_UX_Design_Secara_Otodidak_Untuk_Pemula_c20d5bcaeb.jpg"
+    },
+    {
+        "id": 11,
+        "title": "AI Engineer",
+        "company": "AI Innovations",
+        "location": "Jakarta, Indonesia",
+        "salary": {
+            "min": "16000000",
+            "max": "25000000"
+        },
+        "requirements": {
+            "education": "S1 Teknik Informatika atau setara",
+            "experience": "Minimal 3 tahun pengalaman dalam AI/ML",
+            "skills": [
+                "Python",
+                "TensorFlow",
+                "Machine Learning"
+            ]
+        },
+        "description": "Mengembangkan dan menerapkan model kecerdasan buatan.",
+        "benefits": [
+            "Work from home opsional",
+            "Bonus kinerja",
+            "Asuransi kesehatan"
+        ],
+        "image": "https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_an_AI_Engineer.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Game Developer",
+        "company": "Game Studio X",
+        "location": "Bandung, Indonesia",
+        "salary": {
+            "min": "10000000",
+            "max": "16000000"
+        },
+        "requirements": {
+            "education": "S1 Teknik Informatika atau setara",
+            "experience": "Minimal 2 tahun pengalaman dalam pengembangan game",
+            "skills": [
+                "Unity",
+                "C#",
+                "Unreal Engine"
+            ]
+        },
+        "description": "Mengembangkan game untuk berbagai platform.",
+        "benefits": [
+            "Bonus proyek",
+            "Work from anywhere",
+            "Tunjangan perangkat"
+        ],
+        "image": "https://vocasia.id/blog/wp-content/uploads/2021/11/game-developer.jpg"
+    },
+    {
+        "id": 13,
+        "title": "System Administrator",
+        "company": "IT Solutions Ltd.",
+        "location": "Surabaya, Indonesia",
+        "salary": {
+            "min": "12000000",
+            "max": "17000000"
+        },
+        "requirements": {
+            "education": "S1 Teknik Informatika atau setara",
+            "experience": "Minimal 3 tahun pengalaman dalam administrasi sistem",
+            "skills": [
+                "Linux",
+                "Windows Server",
+                "Networking"
+            ]
+        },
+        "description": "Mengelola infrastruktur IT perusahaan.",
+        "benefits": [
+            "Asuransi kesehatan",
+            "Bonus tahunan",
+            "Tunjangan transportasi"
+        ],
+        "image": "https://skillpointe.com/sites/default/files/2020-08/Network%20and%20computer%20systems%20administrator.jpg"
+    },
+    {
+        "id": 14,
+        "title": "Network Engineer",
+        "company": "NetConnect",
+        "location": "Jakarta, Indonesia",
+        "salary": {
+            "min": "14000000",
+            "max": "20000000"
+        },
+        "requirements": {
+            "education": "S1 Teknik Informatika atau setara",
+            "experience": "Minimal 3 tahun pengalaman dalam jaringan",
+            "skills": [
+                "Cisco",
+                "Routing & Switching",
+                "Firewall"
+            ]
+        },
+        "description": "Mengelola dan mengoptimalkan jaringan perusahaan.",
+        "benefits": [
+            "Asuransi kesehatan",
+            "Bonus tahunan",
+            "Work from home opsional"
+        ],
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScPHtcUlYldyBPSbXUlO1yL3sN6BUFDrIWTg&s"
+    },
+    {
+        "id": 15,
+        "title": "IT Support Specialist",
+        "company": "Tech Support Solutions",
+        "location": "Bandung, Indonesia",
+        "salary": {
+            "min": "7000000",
+            "max": "10000000"
+        },
+        "requirements": {
+            "education": "D3/S1 Teknik Informatika atau setara",
+            "experience": "Minimal 1 tahun pengalaman dalam IT support",
+            "skills": [
+                "Troubleshooting",
+                "Windows/MacOS",
+                "Customer Service"
+            ]
+        },
+        "description": "Memberikan dukungan teknis kepada pengguna.",
+        "benefits": [
+            "Bonus tahunan",
+            "Tunjangan transportasi",
+            "Asuransi kesehatan"
+        ],
+        "image": "https://itbox.id/wp-content/uploads/2025/03/IT-Support-Specialist_-scaled.jpg"
+    },
+    {
+        "id": 16,
+        "title": "Cloud Engineer",
+        "company": "CloudX Solutions",
+        "location": "Jakarta, Indonesia",
+        "salary": {
+            "min": "15000000",
+            "max": "22000000"
+        },
+        "requirements": {
+            "education": "S1 Teknik Informatika atau setara",
+            "experience": "Minimal 3 tahun pengalaman dalam cloud computing",
+            "skills": [
+                "AWS",
+                "Google Cloud",
+                "Terraform"
+            ]
+        },
+        "description": "Mengelola dan mengoptimalkan layanan cloud perusahaan.",
+        "benefits": [
+            "Asuransi kesehatan",
+            "Bonus tahunan",
+            "Remote working"
+        ],
+        "image": "https://i0.wp.com/biztechcollege.com/wp-content/uploads/2021/05/Cloud-Engineer.png"
+    },
+    {
+        "id": 17,
+        "title": "Business Intelligence Analyst",
+        "company": "Data Insights Ltd.",
+        "location": "Surabaya, Indonesia",
+        "salary": {
+            "min": "12000000",
+            "max": "18000000"
+        },
+        "requirements": {
+            "education": "S1 Statistik, Matematika, atau Ilmu Komputer",
+            "experience": "Minimal 2 tahun pengalaman dalam BI",
+            "skills": [
+                "Power BI",
+                "SQL",
+                "Data Visualization"
+            ]
+        },
+        "description": "Menganalisis data bisnis untuk mendukung pengambilan keputusan.",
+        "benefits": [
+            "Tunjangan transportasi",
+            "Bonus tahunan",
+            "Asuransi kesehatan"
+        ],
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVJr7Yk-0rRDcdvj7ToghdWxe6FaV81VVuUg&s"
+    },
+    {
+        "id": 18,
+        "title": "Full Stack Developer",
+        "company": "Tech Hub Indonesia",
+        "location": "Jakarta, Indonesia",
+        "salary": {
+            "min": "10000000",
+            "max": "16000000"
+        },
+        "requirements": {
+            "education": "S1 Teknik Informatika atau setara",
+            "experience": "Minimal 3 tahun pengalaman sebagai Full Stack Developer",
+            "skills": [
+                "React",
+                "Node.js",
+                "PostgreSQL"
+            ]
+        },
+        "description": "Mengembangkan aplikasi full-stack dengan teknologi modern.",
+        "benefits": [
+            "Remote working opsional",
+            "Asuransi kesehatan",
+            "Bonus proyek"
+        ],
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxk92CE4CXtXRO8A2JvPa1xjq6L7hD_T0Xzg&s"
+    },
+    {
+        "id": 19,
+        "title": "Scrum Master",
+        "company": "AgileWorks",
+        "location": "Bandung, Indonesia",
+        "salary": {
+            "min": "16000000",
+            "max": "22000000"
+        },
+        "requirements": {
+            "education": "S1 Manajemen atau Teknik Informatika",
+            "experience": "Minimal 3 tahun pengalaman sebagai Scrum Master",
+            "skills": [
+                "Agile",
+                "Scrum",
+                "JIRA"
+            ]
+        },
+        "description": "Memimpin tim agile dalam pengembangan perangkat lunak.",
+        "benefits": [
+            "Work from home opsional",
+            "Asuransi kesehatan",
+            "Bonus tahunan"
+        ],
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnx4SHD9S8_q3iL4C1OW4oKgQRfuPSqhccHw&s"
+    },
+    {
+        "id": 20,
+        "title": "QA Engineer",
+        "company": "Quality First",
+        "location": "Surabaya, Indonesia",
+        "salary": {
+            "min": "10000000",
+            "max": "15000000"
+        },
+        "requirements": {
+            "education": "S1 Teknik Informatika atau setara",
+            "experience": "Minimal 2 tahun pengalaman dalam QA",
+            "skills": [
+                "Selenium",
+                "Jest",
+                "Test Automation"
+            ]
+        },
+        "description": "Mengembangkan dan menjalankan strategi pengujian perangkat lunak.",
+        "benefits": [
+            "Asuransi kesehatan",
+            "Bonus tahunan",
+            "Remote working"
+        ],
+        "image": "https://www.theforage.com/blog/wp-content/uploads/2023/04/What-Is-a-QA-Engineer-2.jpg"
+    }
+]

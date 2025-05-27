@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Andi Pratama",
+    "review": "Pelayanan sangat memuaskan dan prosesnya cepat. Saya sangat merekomendasikan perusahaan ini!",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Siti Rahmawati",
+    "review": "Tim sangat profesional dan ramah. Hasil pekerjaan sesuai harapan.",
+    "rating": 4
+  },
+  {
+    "id": 3,
+    "name": "Budi Santoso",
+    "review": "Saya puas dengan layanan yang diberikan, sangat membantu kebutuhan bisnis saya.",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "name": "Dewi Lestari",
+    "review": "Respon cepat dan solusi yang ditawarkan sangat efektif.",
+    "rating": 4
+  },
+  {
+    "id": 5,
+    "name": "Rizky Maulana",
+    "review": "Harga terjangkau dengan kualitas layanan yang sangat baik.",
+    "rating": 5
+  },
+  {
+    "id": 6,
+    "name": "Fitriani",
+    "review": "Sangat puas dengan hasil kerjanya, akan menggunakan jasa ini lagi.",
+    "rating": 5
+  },
+  {
+    "id": 7,
+    "name": "Agus Salim",
+    "review": "Pelayanan pelanggan sangat responsif dan membantu.",
+    "rating": 4
+  },
+  {
+    "id": 8,
+    "name": "Maya Sari",
+    "review": "Proses pengerjaan cepat dan hasilnya memuaskan.",
+    "rating": 5
+  },
+  {
+    "id": 9,
+    "name": "Dian Permata",
+    "review": "Saya sangat terbantu dengan layanan yang diberikan, terima kasih!",
+    "rating": 5
+  },
+  {
+    "id": 10,
+    "name": "Yusuf Hidayat",
+    "review": "Rekomendasi terbaik untuk layanan profesional dan berkualitas.",
+    "rating": 5
+  }
+]

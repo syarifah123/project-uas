@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "Bagaimana cara memesan produk di toko ini?",
+    "answer": "Anda dapat memesan produk dengan menambahkannya ke keranjang dan mengikuti proses checkout hingga pembayaran selesai."
+  },
+  {
+    "id": 2,
+    "question": "Apa metode pembayaran yang tersedia?",
+    "answer": "Kami menerima pembayaran melalui transfer bank, kartu kredit, dan e-wallet."
+  },
+  {
+    "id": 3,
+    "question": "Berapa lama waktu pengiriman produk?",
+    "answer": "Waktu pengiriman produk biasanya 2-5 hari kerja tergantung lokasi Anda."
+  },
+  {
+    "id": 4,
+    "question": "Apakah produk bergaransi?",
+    "answer": "Ya, semua produk kami bergaransi resmi sesuai dengan ketentuan pabrikan."
+  },
+  {
+    "id": 5,
+    "question": "Bagaimana cara mengajukan retur atau klaim garansi?",
+    "answer": "Silakan hubungi layanan pelanggan kami dengan menyertakan bukti pembelian dan detail masalah produk."
+  }
+]

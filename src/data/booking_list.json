@@ -1,0 +1,92 @@
+[
+  {
+    "booking_id": 101,
+    "user_name": "Andi Pratama",
+    "email": "andi.pratama@email.com",
+    "phone": "081234567890",
+    "job_id": 1,
+    "booking_date": "2024-06-01",
+    "status": "pending"
+  },
+  {
+    "booking_id": 102,
+    "user_name": "Budi Santoso",
+    "email": "budi.santoso@email.com",
+    "phone": "081234567891",
+    "job_id": 2,
+    "booking_date": "2024-06-02",
+    "status": "confirmed"
+  },
+  {
+    "booking_id": 103,
+    "user_name": "Citra Dewi",
+    "email": "citra.dewi@email.com",
+    "phone": "081234567892",
+    "job_id": 3,
+    "booking_date": "2024-06-03",
+    "status": "pending"
+  },
+  {
+    "booking_id": 104,
+    "user_name": "Dedi Gunawan",
+    "email": "dedi.gunawan@email.com",
+    "phone": "081234567893",
+    "job_id": 4,
+    "booking_date": "2024-06-04",
+    "status": "cancelled"
+  },
+  {
+    "booking_id": 105,
+    "user_name": "Eka Putri",
+    "email": "eka.putri@email.com",
+    "phone": "081234567894",
+    "job_id": 5,
+    "booking_date": "2024-06-05",
+    "status": "confirmed"
+  },
+  {
+    "booking_id": 106,
+    "user_name": "Fajar Hidayat",
+    "email": "fajar.hidayat@email.com",
+    "phone": "081234567895",
+    "job_id": 6,
+    "booking_date": "2024-06-06",
+    "status": "pending"
+  },
+  {
+    "booking_id": 107,
+    "user_name": "Gita Lestari",
+    "email": "gita.lestari@email.com",
+    "phone": "081234567896",
+    "job_id": 7,
+    "booking_date": "2024-06-07",
+    "status": "confirmed"
+  },
+  {
+    "booking_id": 108,
+    "user_name": "Hendra Wijaya",
+    "email": "hendra.wijaya@email.com",
+    "phone": "081234567897",
+    "job_id": 8,
+    "booking_date": "2024-06-08",
+    "status": "pending"
+  },
+  {
+    "booking_id": 109,
+    "user_name": "Intan Sari",
+    "email": "intan.sari@email.com",
+    "phone": "081234567898",
+    "job_id": 9,
+    "booking_date": "2024-06-09",
+    "status": "confirmed"
+  },
+  {
+    "booking_id": 110,
+    "user_name": "Joko Susilo",
+    "email": "joko.susilo@email.com",
+    "phone": "081234567899",
+    "job_id": 10,
+    "booking_date": "2024-06-10",
+    "status": "pending"
+  }
+]

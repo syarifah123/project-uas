@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Software Engineer",
+    "company": "PT Teknologi Nusantara",
+    "location": "Jakarta",
+    "description": "Bertanggung jawab dalam pengembangan aplikasi web dan mobile.",
+    "requirements": [
+      "Minimal S1 Teknik Informatika",
+      "Pengalaman 2 tahun di bidang terkait",
+      "Menguasai JavaScript dan React"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Digital Marketing Specialist",
+    "company": "CV Kreatif Media",
+    "location": "Bandung",
+    "description": "Mengelola kampanye digital dan media sosial perusahaan.",
+    "requirements": [
+      "Minimal D3 Komunikasi",
+      "Menguasai SEO dan SEM",
+      "Pengalaman minimal 1 tahun"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Designer",
+    "company": "PT Desain Inovatif",
+    "location": "Surabaya",
+    "description": "Mendesain tampilan dan pengalaman pengguna aplikasi.",
+    "requirements": [
+      "Minimal S1 Desain Komunikasi Visual",
+      "Menguasai Figma/Adobe XD",
+      "Portofolio desain"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Accountant",
+    "company": "PT Akuntansi Jaya",
+    "location": "Jakarta",
+    "description": "Mengelola laporan keuangan dan perpajakan perusahaan.",
+    "requirements": [
+      "Minimal S1 Akuntansi",
+      "Menguasai software akuntansi",
+      "Pengalaman minimal 2 tahun"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Customer Service",
+    "company": "PT Layanan Prima",
+    "location": "Yogyakarta",
+    "description": "Memberikan layanan dan solusi kepada pelanggan.",
+    "requirements": [
+      "Minimal SMA/SMK",
+      "Komunikatif dan ramah",
+      "Bersedia bekerja shift"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Data Analyst",
+    "company": "PT Data Solusi",
+    "location": "Jakarta",
+    "description": "Menganalisis data bisnis untuk mendukung pengambilan keputusan.",
+    "requirements": [
+      "Minimal S1 Statistika/Matematika",
+      "Menguasai SQL dan Excel",
+      "Pengalaman minimal 1 tahun"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "HRD Staff",
+    "company": "PT Sumber Daya Manusia",
+    "location": "Semarang",
+    "description": "Mengelola administrasi dan rekrutmen karyawan.",
+    "requirements": [
+      "Minimal S1 Psikologi/Manajemen",
+      "Menguasai MS Office",
+      "Komunikatif"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Content Writer",
+    "company": "CV Media Kreatif",
+    "location": "Bandung",
+    "description": "Membuat konten artikel untuk website dan media sosial.",
+    "requirements": [
+      "Minimal D3/S1",
+      "Menguasai EYD dan SEO",
+      "Pengalaman menulis"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Network Engineer",
+    "company": "PT Jaringan Nusantara",
+    "location": "Jakarta",
+    "description": "Mengelola dan memelihara jaringan komputer perusahaan.",
+    "requirements": [
+      "Minimal S1 Teknik Informatika",
+      "Menguasai TCP/IP dan perangkat jaringan",
+      "Sertifikasi CCNA lebih diutamakan"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Graphic Designer",
+    "company": "PT Visual Kreatif",
+    "location": "Surabaya",
+    "description": "Membuat desain grafis untuk kebutuhan promosi.",
+    "requirements": [
+      "Minimal D3 Desain Grafis",
+      "Menguasai Adobe Photoshop & Illustrator",
+      "Kreatif dan inovatif"
+    ]
+  }
+]

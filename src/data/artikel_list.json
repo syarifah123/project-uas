@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Lowongan Software Engineer",
+        "content": "Tech Innovate Inc. membuka lowongan untuk posisi Software Engineer di Jakarta, Indonesia. Gaji yang ditawarkan berkisar antara Rp7.500.000 hingga Rp10.000.000. Kandidat diharapkan memiliki pendidikan S1 Teknik Informatika atau setara, pengalaman minimal 2 tahun dalam pengembangan perangkat lunak, serta menguasai JavaScript, React, dan Node.js. Tanggung jawab utama adalah mengembangkan dan memelihara aplikasi berbasis web. Fasilitas yang diberikan meliputi asuransi kesehatan, bonus tahunan, dan opsi kerja dari rumah.",
+        "date": "2023-10-01",
+        "image": "https://teentrust.ng/wp-content/uploads/2025/02/cyber_security_vs_software_engineering-800x477.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Lowongan Data Analyst",
+        "content": "Data Insight Solutions mencari Data Analyst untuk bergabung di Bandung, Indonesia. Gaji yang ditawarkan mulai dari Rp12.000.000 hingga Rp18.000.000. Kandidat harus memiliki pendidikan S1 Statistik, Matematika, atau Ilmu Komputer, pengalaman minimal 1 tahun dalam analisis data, serta menguasai Python, SQL, dan Tableau. Tugas utama adalah menganalisis data dan membuat laporan untuk mendukung pengambilan keputusan bisnis. Fasilitas yang diberikan meliputi tunjangan transportasi, program pelatihan, dan bonus kinerja.",
+        "date": "2023-10-02",
+        "image": "https://teentrust.ng/wp-content/uploads/2025/02/cyber_security_vs_software_engineering-800x477.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Lowongan Digital Marketing Specialist",
+        "content": "Creative Media Agency membuka lowongan untuk Digital Marketing Specialist di Surabaya, Indonesia. Gaji yang ditawarkan berkisar antara Rp10.000.000 hingga Rp15.000.000. Kandidat diharapkan memiliki pendidikan S1 Pemasaran atau Komunikasi, pengalaman minimal 3 tahun dalam pemasaran digital, serta menguasai SEO, Google Ads, dan Social Media Marketing. Tugas utama adalah merancang dan menjalankan strategi pemasaran digital untuk meningkatkan brand awareness. Fasilitas yang diberikan meliputi asuransi jiwa, bonus proyek, dan jam kerja fleksibel.",
+        "date": "2023-10-03",
+        "image": "https://teentrust.ng/wp-content/uploads/2025/02/cyber_security_vs_software_engineering-800x477.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Lowongan Mobile App Developer",
+        "content": "Innovate Mobile mencari Mobile App Developer untuk bergabung di Jakarta, Indonesia. Gaji yang ditawarkan mulai dari Rp8.000.000 hingga Rp12.000.000. Kandidat harus memiliki pendidikan S1 Teknik Informatika atau setara, pengalaman minimal 2 tahun dalam pengembangan aplikasi mobile, serta menguasai Flutter, React Native, dan Kotlin. Tugas utama adalah mengembangkan dan memelihara aplikasi mobile untuk platform Android dan iOS. Fasilitas yang diberikan meliputi asuransi kesehatan, bonus tahunan, dan opsi kerja dari rumah.",
+        "date": "2023-10-04",
+        "image": "https://teentrust.ng/wp-content/uploads/2025/02/cyber_security_vs_software_engineering-800x477.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Lowongan Backend Developer",
+        "content": "Cloud Solutions membuka lowongan untuk Backend Developer di Yogyakarta, Indonesia. Gaji yang ditawarkan berkisar antara Rp9.000.000 hingga Rp13.000.000. Kandidat diharapkan memiliki pendidikan S1 Teknik Informatika atau setara, pengalaman minimal 3 tahun dalam pengembangan backend, serta menguasai Node.js, Go, dan MongoDB. Tugas utama adalah membangun dan mengelola sistem backend yang skalabel dan efisien. Fasilitas yang diberikan meliputi tunjangan kesehatan, opsi kerja dari mana saja, dan bonus kinerja.",
+        "date": "2023-10-05",
+        "image": "https://teentrust.ng/wp-content/uploads/2025/02/cyber_security_vs_software_engineering-800x477.jpg"
+    }
+]

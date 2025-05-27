@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Pro 15",
+    "description": "Laptop Pro 15 dengan prosesor Intel Core i7, RAM 16GB, dan SSD 512GB. Cocok untuk kebutuhan profesional.",
+    "price": 25000000,
+    "stock": 10,
+    "image": "https://popularitas.com/wp-content/uploads/2021/05/mac.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone X",
+    "description": "Smartphone X dengan layar AMOLED 6.5 inci, kamera 108MP, dan baterai 5000mAh.",
+    "price": 12000000,
+    "stock": 25,
+    "image": "https://m.media-amazon.com/images/I/517cbS1x8gL.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Headphone Wireless",
+    "description": "Headphone wireless dengan kualitas suara premium dan noise cancellation.",
+    "price": 3500000,
+    "stock": 50,
+    "image": "https://www.jagatreview.com/wp-content/uploads/2021/10/infinix-zero-x-pro-2.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Smartwatch Z",
+    "description": "Smartwatch Z dengan fitur pelacak kebugaran, monitor detak jantung, dan tahan air.",
+    "price": 2000000,
+    "stock": 30,
+    "image": "https://dynamic.zacdn.com/0uAhnAPlsVghl7MYC3gY3Q23xMU=/filters:quality(70):format(webp)/https://static-id.zacdn.com/p/digitec-smart-watch-8413-3778963-1.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Tablet Pro 10",
+    "description": "Tablet Pro 10 dengan layar 10 inci, prosesor octa-core, dan penyimpanan 128GB.",
+    "price": 8000000,
+    "stock": 15,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK7lI0nkB_MmdDNwtD2_ID914PvFu0Xxr5WU8u3GOOWT0LqiHK33Vf65TMbru4EqJWYXE&usqp=CAU"
+  }
+]
