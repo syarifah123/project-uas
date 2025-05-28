@@ -11,8 +11,8 @@ export default function Quotes() {
 
     useEffect(() => {
         const timeout = setTimeout(() => {
-            axios.get('https://api.allorigins.win/get?url=' + encodeURIComponent('https://zenquotes.io/api/quotes/random'))
-
+            // axios.get('https://api.allorigins.win/get?url=' + encodeURIComponent('https://zenquotes.io/api/quotes/random'))
+            axios.get(`https://zenquotes.io/api/quotes/random`) 
             .then((response) => {
                 if (response.status !== 200) {
                     setError(response.data.message)

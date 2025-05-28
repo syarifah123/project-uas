@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PageHeader from "../components/PageHeader"
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BsFillExclamationDiamondFill } from "react-icons/bs";
 
 export default function QuoteDetail() {

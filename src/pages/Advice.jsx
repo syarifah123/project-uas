@@ -11,8 +11,7 @@ export default function Advice() {
 
     useEffect(() => {
         const timeout = setTimeout(() => {
-            axios
-                .get(`https://api.adviceslip.com/advice`) // menerapkan search dan query param
+            axios.get(`https://api.adviceslip.com/advice`) 
                 .then((response) => {
                     if (response.status !== 200) {
                         setError(response.data.message)
