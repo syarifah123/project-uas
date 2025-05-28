@@ -1,3 +1,4 @@
+import { MdFastfood } from "react-icons/md"; 
 import { BiError } from "react-icons/bi"; 
 import { BiErrorAlt } from "react-icons/bi"; 
 import { BiCommentError } from "react-icons/bi"; 
@@ -12,6 +13,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { BiLogIn } from "react-icons/bi";
 import { AiOutlineHome } from "react-icons/ai";
 import { AiOutlinePlusCircle } from "react-icons/ai";
+
 import ListMenu from "./ListMenu.jsx";
 export default function Sidebar() {
   return (
@@ -114,7 +116,13 @@ export default function Sidebar() {
             icon={<BiUser />}
             label="List User"
           />
-          <ListMenu id="menu-13" to="/Login" icon={<BiLogIn />} label="Login" />
+          <ListMenu
+            id="menu-13"
+            to="/products"
+            icon={<MdFastfood />}
+            label="Products"
+          />
+          <ListMenu id="menu-14" to="/Login" icon={<BiLogIn />} label="Login" />
         </ul>
       </div>
 
