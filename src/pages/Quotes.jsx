@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { BsFillExclamationDiamondFill } from "react-icons/bs";
 
 export default function Quotes() {
-    const breadcrumb = ["Dashboard", "Product List"]
+    const breadcrumb = ["Dashboard", "Quote List"]
     const [quotes, setQuotes] = useState([])
     const [error, setError] = useState(null)
 
