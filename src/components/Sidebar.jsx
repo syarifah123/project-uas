@@ -1,11 +1,12 @@
-import { MdFastfood } from "react-icons/md"; 
-import { BiError } from "react-icons/bi"; 
-import { BiErrorAlt } from "react-icons/bi"; 
-import { BiCommentError } from "react-icons/bi"; 
-import { BsFillBookmarksFill } from "react-icons/bs"; 
+import { BsFillChatLeftTextFill } from "react-icons/bs"; 
 import { BsFillChatLeftQuoteFill } from "react-icons/bs"; 
-import { CgWorkAlt } from "react-icons/cg"; 
-import { FaQuestionCircle } from "react-icons/fa"; 
+import { MdFastfood } from "react-icons/md";
+import { BiError } from "react-icons/bi";
+import { BiErrorAlt } from "react-icons/bi";
+import { BiCommentError } from "react-icons/bi";
+import { BsFillBookmarksFill } from "react-icons/bs";
+import { CgWorkAlt } from "react-icons/cg";
+import { FaQuestionCircle } from "react-icons/fa";
 import { BiText, BiUser } from "react-icons/bi";
 import { BiCartAdd } from "react-icons/bi";
 import { BsPerson } from "react-icons/bs";
@@ -61,7 +62,7 @@ export default function Sidebar() {
             icon={<BiText />}
             label="Artikel"
             to="artikel"
-          />  
+          />
           <ListMenu
             id="menu-4"
             icon={<FaQuestionCircle />}
@@ -121,8 +122,14 @@ export default function Sidebar() {
             to="/products"
             icon={<MdFastfood />}
             label="Products"
+          /> 
+          <ListMenu
+            id="menu-14"
+            to="/advice"
+            icon={<BsFillChatLeftTextFill />}
+            label="Advice"
           />
-          <ListMenu id="menu-14" to="/Login" icon={<BiLogIn />} label="Login" />
+          <ListMenu id="menu-15" to="/Login" icon={<BiLogIn />} label="Login" />
         </ul>
       </div>
 

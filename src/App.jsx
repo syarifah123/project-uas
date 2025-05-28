@@ -23,6 +23,8 @@ const Register = React.lazy(() => import("./pages/auth/Register"));
 const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
 const Products = React.lazy(() => import("./pages/Products"));
 const ProductDetail = React.lazy(() => import("./pages/ProductDetail"))
+const Advice = React.lazy(() => import("./pages/Advice"));
+const AdviceDetail = React.lazy(() => import("./pages/AdviceDetail"));
 
 
 function App() {
@@ -41,7 +43,9 @@ function App() {
           <Route path="/booking" element={<Booking />} />
           <Route path="/UserList" element={<UserList />} />
           <Route path="products" element={<Products />} />
-          <Route path="/products/:id" element={<ProductDetail />} /> 
+          <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="advice" element={<Advice />} />
+          <Route path="/advice/:id" element={<AdviceDetail />} /> 
         </Route>
         {/* Error Pages */}
         <Route path="/ErrorPage400" element={<ErrorPage400 />} />
