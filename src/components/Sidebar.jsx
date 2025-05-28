@@ -1,3 +1,4 @@
+import { ImQuotesLeft } from "react-icons/im"; 
 import { BsFillChatLeftTextFill } from "react-icons/bs"; 
 import { BsFillChatLeftQuoteFill } from "react-icons/bs"; 
 import { MdFastfood } from "react-icons/md";
@@ -129,7 +130,13 @@ export default function Sidebar() {
             icon={<BsFillChatLeftTextFill />}
             label="Advice"
           />
-          <ListMenu id="menu-15" to="/Login" icon={<BiLogIn />} label="Login" />
+          <ListMenu
+            id="menu-15"
+            to="/quotes"
+            icon={<ImQuotesLeft />}
+            label="Quotes"
+          />
+          <ListMenu id="menu-16" to="/Login" icon={<BiLogIn />} label="Login" />
         </ul>
       </div>
 

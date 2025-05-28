@@ -25,6 +25,8 @@ const Products = React.lazy(() => import("./pages/Products"));
 const ProductDetail = React.lazy(() => import("./pages/ProductDetail"))
 const Advice = React.lazy(() => import("./pages/Advice"));
 const AdviceDetail = React.lazy(() => import("./pages/AdviceDetail"));
+const Quotes = React.lazy(() => import("./pages/Quotes"));
+const QuotesDetail = React.lazy(() => import("./pages/QuotesDetail"));
 
 
 function App() {
@@ -45,7 +47,9 @@ function App() {
           <Route path="products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="advice" element={<Advice />} />
-          <Route path="/advice/:id" element={<AdviceDetail />} /> 
+          <Route path="/advice/:id" element={<AdviceDetail />} />
+          <Route path="quotes" element={<Quotes />} />
+          <Route path="/quotes/:id" element={<QuotesDetail />} /> 
         </Route>
         {/* Error Pages */}
         <Route path="/ErrorPage400" element={<ErrorPage400 />} />
