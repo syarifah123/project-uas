@@ -29,3 +29,4 @@ import chart : import Chart from "react-apexcharts";
 npm install axios
 
 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
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIfZyaGZNvnqcWH6mHka1aL4mutnMvqEm3CY/cT9SnHe syarifah23ti@mahasiswa.pcr.ac.id
