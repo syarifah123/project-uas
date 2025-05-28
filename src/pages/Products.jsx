@@ -1,12 +1,49 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import PageHeader from "../components/PageHeader"
-import products from "../data/product-sedap.json"
+// import products from "../data/product-sedap.json"
 
 export default function Products() {
     const breadcrumb = ["Dashboard", "Product List"]
+    const [products, setProducts] = useState([])
+    const [error, setError] = useState(null)
+    const [query, setQuery] = useState("")
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+        axios
+            .get(`https://dummyjson.com/products/search?q=${query}`) // menerapkan search dan query param
+            .then((response) => {
+                if (response.status !== 200) {
+                    setError(response.data.message)
+                    return
+                }
+                setProducts(response.data.products)
+            })
+            .catch((err) => {
+                setError(err.message || "An unknown error occurred")
+            })
+        }, 500); // 500ms debounce
+        return () => clearTimeout(timeout); // cleanup
+    }, [query])
+
+    const errorInfo = error ? (
+        <div className="bg-red-200 mb-5 p-5 text-sm font-light text-gray-600 rounded flex items-center">
+            <BsFillExclamationDiamondFill className="text-red-600 me-2 text-lg" />
+            {error}
+        </div>
+    ) : null
     return (
         <div>
             <PageHeader title="Products" breadcrumb={breadcrumb} />
-
+            {errorInfo}
+            <input
+                type="text"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Cari produk..."
+                className="mb-4 p-3 w-full bg-white rounded-2xl shadow-lg"
+            />
             <table className="min-w-full divide-y divide-gray-200 overflow-hidden rounded-2xl shadow-lg">
                 <thead>
                     <tr className="bg-emerald-600 text-white text-left text-sm font-semibold">
