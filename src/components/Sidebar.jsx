@@ -1,6 +1,6 @@
-import { ImQuotesLeft } from "react-icons/im"; 
-import { BsFillChatLeftTextFill } from "react-icons/bs"; 
-import { BsFillChatLeftQuoteFill } from "react-icons/bs"; 
+import { ImQuotesLeft } from "react-icons/im";
+import { BsFillChatLeftTextFill } from "react-icons/bs";
+import { BsFillChatLeftQuoteFill } from "react-icons/bs";
 import { MdFastfood } from "react-icons/md";
 import { BiError } from "react-icons/bi";
 import { BiErrorAlt } from "react-icons/bi";
@@ -96,34 +96,39 @@ export default function Sidebar() {
           />
           <ListMenu
             id="menu-9"
+            to="/UserList"
+            icon={<BiUser />}
+            label="List User"
+          />
+          {/* Divider */}
+          <hr className="border-t border-gray-300 mx-2" />
+
+          <ListMenu
+            id="menu-10"
             to="/ErrorPage400"
             icon={<BiCommentError />}
             label="ErrorPage400"
           />
           <ListMenu
-            id="menu-10"
+            id="menu-11"
             to="/ErrorPage401"
             icon={<BiErrorAlt />}
             label="ErrorPage401"
           />
           <ListMenu
-            id="menu-11"
+            id="menu-1"
             to="/ErrorPage403"
             icon={<BiError />}
             label="ErrorPage403"
           />
-          <ListMenu
-            id="menu-12"
-            to="/UserList"
-            icon={<BiUser />}
-            label="List User"
-          />
+          {/* Divider */}
+          <hr className="border-t border-gray-300 mx-2" />
           <ListMenu
             id="menu-13"
             to="/products"
             icon={<MdFastfood />}
             label="Products"
-          /> 
+          />
           <ListMenu
             id="menu-14"
             to="/advice"
@@ -136,7 +141,18 @@ export default function Sidebar() {
             icon={<ImQuotesLeft />}
             label="Quotes"
           />
-          <ListMenu id="menu-16" to="/Login" icon={<BiLogIn />} label="Login" />
+          {/* Divider */}
+          <hr className="border-t border-gray-300 mx-2" />
+          <ListMenu
+            id="menu-16"
+            to="/produk-be"
+            icon={<ImQuotesLeft />}
+            label="Produk"
+          />
+          {/* Divider */}
+          <hr className="border-t border-gray-300 mx-2" />
+
+          <ListMenu id="menu-20" to="/Login" icon={<BiLogIn />} label="Login" />
         </ul>
       </div>
 
