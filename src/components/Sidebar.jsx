@@ -157,13 +157,13 @@ export default function Sidebar() {
           />
           <ListMenu
             id="menu-18"
-            to="/produk-be"
+            to="/faq-be"
             icon={<FaQuestionCircle />}
             label="FAQ"
           />
           <ListMenu
             id="menu-19"
-            to="/produk-be"
+            to="/lowongan-be"
             icon={<CgWorkAlt />}
             label="Lowongan Kerja"
           />
