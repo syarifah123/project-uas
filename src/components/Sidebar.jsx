@@ -146,8 +146,26 @@ export default function Sidebar() {
           <ListMenu
             id="menu-16"
             to="/produk-be"
-            icon={<ImQuotesLeft />}
+            icon={<MdFastfood />}
             label="Produk"
+          />
+          <ListMenu
+            id="menu-17"
+            to="/artikel-be"
+            icon={<BsFillChatLeftTextFill />}
+            label="Artikel"
+          />
+          <ListMenu
+            id="menu-18"
+            to="/produk-be"
+            icon={<FaQuestionCircle />}
+            label="FAQ"
+          />
+          <ListMenu
+            id="menu-19"
+            to="/produk-be"
+            icon={<CgWorkAlt />}
+            label="Lowongan Kerja"
           />
           {/* Divider */}
           <hr className="border-t border-gray-300 mx-2" />
