@@ -107,6 +107,8 @@ export default function LowonganBE() {
     setDataForm({
       posisi: noteToEdit.posisi,
       perusahaan: noteToEdit.perusahaan,
+      lokasi: noteToEdit.lokasi,
+      deskripsi: noteToEdit.deskripsi,
     });
     setEditId(id); // Menyimpan ID yang sedang diedit
   }
@@ -149,10 +151,30 @@ export default function LowonganBE() {
             required
             className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
           />
-          <textarea
+          <input
+            type="text"
             name="perusahaan"
             value={dataForm.perusahaan}
-            placeholder="Konten Lowongan Kerja"
+            placeholder="Perusahaan Lowongan Kerja"
+            onChange={handleChange}
+            disabled={loading}
+            required
+            className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
+          />
+          <input
+            type="text"
+            name="lokasi"
+            value={dataForm.lokasi}
+            placeholder="Lokasi Lowongan Kerja"
+            onChange={handleChange}
+            disabled={loading}
+            required
+            className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
+          />
+          <textarea
+            name="deskripsi"
+            value={dataForm.deskripsi}
+            placeholder="Deskripsi Lowongan Kerja"
             onChange={handleChange}
             disabled={loading}
             required
@@ -188,7 +210,7 @@ export default function LowonganBE() {
 
           {!loading && items.length > 0 ? (
             <GenericTable
-              columns={["#", "Judul", "Kategori", "Aksi"]} //Tambah Kolom baru
+              columns={["#", "Posisi", "Perusahaan","Lokasi","Deskripsi", "Aksi"]} //Tambah Kolom baru
               data={items}
               renderRow={(note, index) => (
                 <>
@@ -202,6 +224,12 @@ export default function LowonganBE() {
                   </td>
                   <td className="px-6 py-4 max-w-xs">
                     <div className="truncate text-gray-600">{note.perusahaan}</div>
+                  </td>
+                  <td className="px-6 py-4 max-w-xs">
+                    <div className="truncate text-gray-600">{note.lokasi}</div>
+                  </td>
+                  <td className="px-6 py-4 max-w-xs">
+                    <div className="truncate text-gray-600">{note.deskripsi}</div>
                   </td>
                   <td className="px-6 py-4 max-w-xs">
                     <div className="truncate text-gray-600">
