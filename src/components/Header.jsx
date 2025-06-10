@@ -1,3 +1,4 @@
+import { AiOutlineComment } from "react-icons/ai"; 
 import { FaBell, FaSearch } from "react-icons/fa";
 import { FcAreaChart } from "react-icons/fc";
 import { SlSettings } from "react-icons/sl";
@@ -71,28 +72,17 @@ export default function Header() {
         <HeaderMenuItem
           id="notification-icon"
           icon={<FaBell />}
-          color="bg-blue-100 text-blue-500"
-          badge={50}
+          color="bg-yellow-100"
         />
         <HeaderMenuItem
-          id="chart-icon"
-          icon={<FcAreaChart />}
-          color="bg-blue-100"
+          id="comment"
+          icon={<AiOutlineComment />}
+          color="bg-yellow-100"
         />
-        <HeaderMenuItem
-          id="settings-icon"
-          icon={<SlSettings />}
-          color="bg-red-100 text-red-500"
-        />
+       
 
         {/* Profile Section */}
-        <div
-          id="profile-container"
-          className="flex items-center space-x-4 border-l pl-4 border-gray-300"
-        >
-          <span id="profile-text">
-            Hello, <b>kela</b>
-          </span>
+        <div>
           <img
             id="profile-avatar"
             className="w-10 h-10 rounded-full"

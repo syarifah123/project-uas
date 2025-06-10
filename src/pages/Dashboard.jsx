@@ -12,19 +12,9 @@ export default function Dashboard() {
   return (
     <div id="dashboard-container">
       <PageHeader
-        title="Statika Grafik Penjualan"
+        title={<span className="text-white">Statika Grafik Penjualan</span>}
         breadcrumb={["Admin Panel Kuliner"]}
-      >
-        <button className="bg-blue-600 text-white px-3 py-1 rounded">
-          Add
-        </button>
-        <button className="bg-green-600 text-white px-3 py-1 rounded">
-          Export
-        </button>
-        <button className="bg-gray-600 text-white px-3 py-1 rounded">
-          Back
-        </button>
-      </PageHeader>
+      ></PageHeader>
 
       {/* CARD COUNT */}
       <div

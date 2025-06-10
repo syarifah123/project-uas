@@ -75,7 +75,7 @@ export default function Login() {
   return (
     <div>
       <h2 className="text-2xl font-semibold text-gray-700 mb-6 text-center">
-        Welcome Back 👋
+        Welcome Back 
       </h2>
       {errorInfo}
       {loadingInfo}

@@ -21,7 +21,7 @@ export default function Sidebar() {
   return (
     <div
       id="sidebar"
-      className="flex min-h-screen w-90 flex-col bg-[#6F826A] p-10 shadow-lg"
+      className="flex min-h-screen w-90 flex-col bg-[#1C1F4A] p-10 shadow-lg"
     >
       {/* Logo */}
       <div id="sidebar-logo" className="flex flex-col">
@@ -173,42 +173,26 @@ export default function Sidebar() {
           <ListMenu id="menu-20" to="/Login" icon={<BiLogIn />} label="Login" />
         </ul>
       </div>
-
       {/* Footer */}
-      <div id="sidebar-footer" className="mt-auto">
-        <div
-          id="footer-card"
-          className="bg-[#FFF1D5] px-4 py-2 rounded-md shadow-lg 
-                mb-10 flex items-center"
-        >
-          <div id="footer-text" className="flex-1 p-2 text-white text-sm">
-            <span className="text-black text-sm">
-              {" "}
-              ask you query, our support team will contact 24/7 to you !
-            </span>
-            <div
-              id="add-menu-button"
-              className="flex justify-center items-center p-2 mt-3 bg-white rounded-md space-x-2"
-            >
-              <span className="text-gray-600 flex items-center">
-                {" "}
-                <AiOutlinePlusCircle className="mr-4 text-xl" />
-                Add Menus
-              </span>
-            </div>
-          </div>
-          <img
-            id="footer-avatar"
-            className="w-20 rounded-full"
-            src="https://avatar.iran.liara.run/public/28"
-          />
+      <div className="mt-auto text-white text-sm pt-10">
+        <div className="bg-[#1c1f4a] p-4 rounded-lg">
+          <p className="font-bold mb-2">Customer Support</p>
+          <p className="text-gray-300 mb-4">
+            Ask you query, place requests or important issues. Our support team will contact 24/7 to you.
+          </p>
+          <button className="flex items-center justify-center gap-2 bg-cyan-400 hover:bg-cyan-300 text-black font-bold py-2 px-4 rounded-md w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                d="M18.364 5.636a9 9 0 11-12.728 0M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Connect Now
+          </button>
         </div>
-        <span id="footer-brand" className="font-bold text-gray-400">
-          Sedap Restaurant Admin Dashboard
-        </span>
-        <p id="footer-copyright" className="font-light text-gray-400">
-          &copy; 2025 All Right Reserved
-        </p>
+        <div className="mt-4 text-gray-400">
+          <p className="hover:underline cursor-pointer">Terms & Services</p>
+          <p className="hover:underline cursor-pointer">Privacy Policy</p>
+        </div>
       </div>
     </div>
   );
