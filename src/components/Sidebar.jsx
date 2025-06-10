@@ -30,7 +30,7 @@ export default function Sidebar() {
           className="font-poppins text-[48px] text-white
                 -900"
         >
-          Kuliner Kita
+          KulinerKita
         </span>
         <span
           id="logo-subtitle"

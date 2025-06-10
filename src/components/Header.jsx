@@ -1,4 +1,4 @@
-import { AiOutlineComment } from "react-icons/ai"; 
+import { AiOutlineComment } from "react-icons/ai";
 import { FaBell, FaSearch } from "react-icons/fa";
 import { FcAreaChart } from "react-icons/fc";
 import { SlSettings } from "react-icons/sl";
@@ -54,19 +54,15 @@ export default function Header() {
       className="flex justify-between items-center p-4"
     >
       {/* Search Bar */}
-      <div id="search-bar" className="relative w-full max-w-lg">
+      <div id="search-bar" className="relative w-full max-w-xs">
         <input
           id="search-input"
-          className="border border-gray-100 p-2 pr-10 bg-white w-full max-w-lg rounded-md outline-none"
           type="text"
-          placeholder="Search Here..."
+          placeholder="Search"
+          className="bg-[#2C2E4A] text-white placeholder-white/70 w-full py-2 pl-10 pr-4 rounded-md focus:outline-none"
         />
-        <FaSearch
-          id="search-icon"
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-300"
-        />
+        <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/80" />
       </div>
-
       {/* Icon & Profile Section */}
       <div id="icons-container" className="flex items-center space-x-4">
         <HeaderMenuItem
@@ -79,7 +75,6 @@ export default function Header() {
           icon={<AiOutlineComment />}
           color="bg-yellow-100"
         />
-       
 
         {/* Profile Section */}
         <div>
