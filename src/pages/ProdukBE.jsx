@@ -34,9 +34,9 @@ export default function ProdukBE() {
 
   const [dataForm, setDataForm] = useState({
     nama: "",
-    kategori: "",
+    deskripsi: "",
     harga: "",
-    vendor: "",
+    foto: "",
   });
 
   // Handle perubahan nilai input form
@@ -67,7 +67,7 @@ export default function ProdukBE() {
     }
 
     // Reset form & edit mode
-    setDataForm({ nama: "", kategori: "", harga: "", vendor: "" });
+    setDataForm({ nama: "", deskripsi: "", harga: "", foto: "" });
     setEditId(null);
 
     // Refresh data
@@ -106,9 +106,9 @@ export default function ProdukBE() {
   if (noteToEdit) {
     setDataForm({
       nama: noteToEdit.nama,
-      kategori: noteToEdit.kategori,
+      deskripsi: noteToEdit.deskripsi,
       harga: noteToEdit.harga,
-      vendor: noteToEdit.vendor,
+      foto: noteToEdit.foto,
     });
     setEditId(id); // Menyimpan ID yang sedang diedit
   }
@@ -117,7 +117,7 @@ export default function ProdukBE() {
   return (
     <div className="max-w-5xl mx-auto p-6">
       <div className="mb-6">
-        <h2 className="text-3xl font-bold text-gray-800 mb-2">Produk</h2>
+        <h2 className="text-3xl font-bold text-white mb-2">Produk</h2>
       </div>
 
       {/* Form Card */}
@@ -143,6 +143,16 @@ export default function ProdukBE() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="text"
+            name="foto"
+            value={dataForm.foto}
+            placeholder="Foto Produk"
+            onChange={handleChange}
+            disabled={loading}
+            required
+            className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
+          />
+          <input
+            type="text"
             name="nama"
             value={dataForm.nama}
             placeholder="Nama Produk"
@@ -153,9 +163,9 @@ export default function ProdukBE() {
           />
           <input
             type="text"
-            name="kategori"
-            value={dataForm.kategori}
-            placeholder="Kategori Produk"
+            name="deskripsi"
+            value={dataForm.deskripsi}
+            placeholder="Deskripsi Produk"
             onChange={handleChange}
             disabled={loading}
             required
@@ -171,16 +181,7 @@ export default function ProdukBE() {
             required
             className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
           />
-          <input
-            type="text"
-            name="vendor"
-            value={dataForm.vendor}
-            placeholder="Vendor Produk"
-            onChange={handleChange}
-            disabled={loading}
-            required
-            className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
-          />
+        
 
           <button
             type="submit"
@@ -210,12 +211,24 @@ export default function ProdukBE() {
 
           {!loading && items.length > 0 ? (
             <GenericTable
-              columns={["#", "Nama", "Kategori","Harga","Vendor", "Aksi"]} //Tambah Kolom baru
+              columns={["#", "Foto", "Nama", "deskripsi","Harga", "Aksi"]} //Tambah Kolom baru
               data={items}
               renderRow={(note, index) => (
                 <>
                   <td className="px-6 py-4 font-medium text-gray-700">
                     {index + 1}.
+                  </td>
+                  <td className="px-6 py-4 max-w-xs">
+                    {note.foto ? (
+                      <img
+                        src={note.foto}
+                        alt={note.nama}
+                        className="h-16 w-16 object-cover rounded-lg border"
+                        onError={e => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/64?text=No+Image"; }}
+                      />
+                    ) : (
+                      <span className="text-gray-400 italic">Tidak ada foto</span>
+                    )}
                   </td>
                   <td className="px-6 py-4">
                     <div className="font-semibold text-emerald-600">
@@ -223,13 +236,10 @@ export default function ProdukBE() {
                     </div>
                   </td>
                   <td className="px-6 py-4 max-w-xs">
-                    <div className="truncate text-gray-600">{note.kategori}</div>
+                    <div className="truncate text-gray-600">{note.deskripsi}</div>
                   </td>
                   <td className="px-6 py-4 max-w-xs">
                     <div className="truncate text-gray-600">{note.harga}</div>
-                  </td>
-                  <td className="px-6 py-4 max-w-xs">
-                    <div className="truncate text-gray-600">{note.vendor}</div>
                   </td>
                   <td className="px-6 py-4 max-w-xs">
                     <div className="truncate text-gray-600">

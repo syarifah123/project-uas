@@ -167,10 +167,16 @@ export default function Sidebar() {
             icon={<CgWorkAlt />}
             label="Lowongan Kerja"
           />
+          <ListMenu
+            id="menu-20"
+            to="/testimoni-be"
+            icon={<CgWorkAlt />}
+            label="Testimoni"
+          />
           {/* Divider */}
           <hr className="border-t border-gray-300 mx-2" />
 
-          <ListMenu id="menu-20" to="/Login" icon={<BiLogIn />} label="Login" />
+          <ListMenu id="menu-22" to="/Login" icon={<BiLogIn />} label="Login" />
         </ul>
       </div>
       {/* Footer */}

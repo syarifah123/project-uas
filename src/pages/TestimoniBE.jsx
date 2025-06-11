@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import LoadingSpinner from "../components/LoadingSpinner";
 import GenericTable from "../components/GenericTable";
 import EmptyState from "../components/EmptyState";
-import { faqAPI } from "../services/faqAPI";
+import { testimoniAPI } from "../services/testimoniAPI";
 
-export default function FAQBE() {
+export default function TestimoniBE() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -22,10 +22,10 @@ export default function FAQBE() {
     try {
       setLoading(true);
       setError("");
-      const data = await faqAPI.fetchNotes();
+      const data = await testimoniAPI.fetchNotes();
       setItems(data);
     } catch (err) {
-      setError("Gagal memuat FAQ");
+      setError("Gagal memuat Testimoni");
       console.error(err);
     } finally {
       setLoading(false);
@@ -33,8 +33,9 @@ export default function FAQBE() {
   };
 
   const [dataForm, setDataForm] = useState({
-    pertanyaan: "",
-    jawaban: "",
+    nama: "",
+    deskripsi: "",
+    foto: "",
   });
 
   // Handle perubahan nilai input form
@@ -56,16 +57,16 @@ export default function FAQBE() {
 
     if (editId) {
       // MODE UPDATE
-      await faqAPI.updateNote(editId, dataForm);
-      setSuccess("FAQ berhasil diperbarui!");
+      await testimoniAPI.updateNote(editId, dataForm);
+      setSuccess("Testimoni berhasil diperbarui!");
     } else {
       // MODE TAMBAH
-      await faqAPI.createNote(dataForm);
-      setSuccess("FAQ berhasil ditambahkan!");
+      await testimoniAPI.createNote(dataForm);
+      setSuccess("Testimoni berhasil ditambahkan!");
     }
 
     // Reset form & edit mode
-    setDataForm({ pertanyaan: "", jawaban: "" });
+    setDataForm({ nama: "", deskripsi: "", foto: "" });
     setEditId(null);
 
     // Refresh data
@@ -80,7 +81,7 @@ export default function FAQBE() {
 };
 
   const handleDelete = async (id) => {
-    const konfirmasi = confirm("Yakin ingin menghapus FAQ ini?");
+    const konfirmasi = confirm("Yakin ingin menghapus Testimoni ini?");
     if (!konfirmasi) return;
 
     try {
@@ -88,7 +89,7 @@ export default function FAQBE() {
       setError("");
       setSuccess("");
 
-      await faqAPI.deleteNote(id);
+      await testimoniAPI.deleteNote(id);
 
       // Refresh data
       loadNotes();
@@ -103,8 +104,9 @@ export default function FAQBE() {
   const noteToEdit = items.find(note => note.id === id);
   if (noteToEdit) {
     setDataForm({
-      pertanyaan: noteToEdit.pertanyaan,
-      jawaban: noteToEdit.jawaban,
+      nama: noteToEdit.nama,
+      deskripsi: noteToEdit.deskripsi,
+      foto: noteToEdit.foto,
     });
     setEditId(id); // Menyimpan ID yang sedang diedit
   }
@@ -113,13 +115,13 @@ export default function FAQBE() {
   return (
     <div className="max-w-5xl mx-auto p-6">
       <div className="mb-6">
-        <h2 className="text-3xl font-bold text-white mb-2">FAQ</h2>
+        <h2 className="text-3xl font-bold text-white mb-2">Testimoni</h2>
       </div>
 
       {/* Form Card */}
       <div className="bg-white rounded-2xl shadow-lg p-6">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">
-          Tambah FAQ Baru
+          Tambah Testimoni Baru
         </h3>
 
         {/* Pesan Error */}
@@ -139,22 +141,32 @@ export default function FAQBE() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="text"
-            name="pertanyaan"
-            value={dataForm.pertanyaan}
-            placeholder="Pertanyaan FAQ"
+            name="foto"
+            value={dataForm.foto}
+            placeholder="Foto Testimoni"
             onChange={handleChange}
             disabled={loading}
             required
             className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
           />
-          <textarea
-            name="jawaban"
-            value={dataForm.jawaban}
-            placeholder="Jawaban FAQ"
+          <input
+            type="text"
+            name="nama"
+            value={dataForm.nama}
+            placeholder="Nama Testimoni"
             onChange={handleChange}
             disabled={loading}
             required
-            rows="2"
+            className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
+          />
+          <input
+            type="text"
+            name="deskripsi"
+            value={dataForm.deskripsi}
+            placeholder="Deskripsi Testimoni"
+            onChange={handleChange}
+            disabled={loading}
+            required
             className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
           />
 
@@ -166,18 +178,18 @@ export default function FAQBE() {
           </button>
         </form>
 
-        {/* FAQBE Table */}
+        {/* TestimoniBE Table */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden mt-10">
           <div className="px-6 py-4 ">
             <h3 className="text-lg font-semibold">
-              Daftar FAQ ({items.length})
+              Daftar Testimoni ({items.length})
             </h3>
           </div>
 
-          {loading && <LoadingSpinner text="Memuat FAQ..." />}
+          {loading && <LoadingSpinner text="Memuat Testimoni..." />}
 
           {!loading && items.length === 0 && !error && (
-            <EmptyState text="Belum ada FAQ. Tambah FAQ pertama!" />
+            <EmptyState text="Belum ada Testimoni. Tambah Testimoni pertama!" />
           )}
 
           {!loading && items.length === 0 && error && (
@@ -186,20 +198,32 @@ export default function FAQBE() {
 
           {!loading && items.length > 0 ? (
             <GenericTable
-              columns={["#", "Pertanyaan", "Jawaban", "Aksi"]} //Tambah Kolom baru
+              columns={["#", "Foto", "Nama", "deskripsi", "Aksi"]} //Tambah Kolom baru
               data={items}
               renderRow={(note, index) => (
                 <>
                   <td className="px-6 py-4 font-medium text-gray-700">
                     {index + 1}.
                   </td>
+                  <td className="px-6 py-4 max-w-xs">
+                    {note.foto ? (
+                      <img
+                        src={note.foto}
+                        alt={note.nama}
+                        className="h-16 w-16 object-cover rounded-lg border"
+                        onError={e => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/64?text=No+Image"; }}
+                      />
+                    ) : (
+                      <span className="text-gray-400 italic">Tidak ada foto</span>
+                    )}
+                  </td>
                   <td className="px-6 py-4">
                     <div className="font-semibold text-emerald-600">
-                      {note.pertanyaan}
+                      {note.nama}
                     </div>
                   </td>
                   <td className="px-6 py-4 max-w-xs">
-                    <div className="truncate text-gray-600">{note.jawaban}</div>
+                    <div className="truncate text-gray-600">{note.deskripsi}</div>
                   </td>
                   <td className="px-6 py-4 max-w-xs">
                     <div className="truncate text-gray-600">
