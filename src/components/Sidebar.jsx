@@ -173,6 +173,12 @@ export default function Sidebar() {
             icon={<CgWorkAlt />}
             label="Testimoni"
           />
+          <ListMenu
+            id="menu-21"
+            to="/contactus-be"
+            icon={<CgWorkAlt />}
+            label="Contact Us"
+          />
           {/* Divider */}
           <hr className="border-t border-gray-300 mx-2" />
 

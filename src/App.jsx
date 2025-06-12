@@ -32,6 +32,7 @@ const ArtikelBE = React.lazy(() => import("./pages/ArtikelBE"));
 const FAQBE = React.lazy(() => import("./pages/FAQBE"));
 const LowonganBE = React.lazy(() => import("./pages/LowonganBE"));
 const TestimoniBE = React.lazy(() => import("./pages/TestimoniBE"));
+const ContactUsBE = React.lazy(() => import("./pages/ContactUsBE"));
 
 
 function App() {
@@ -59,7 +60,8 @@ function App() {
           <Route path="/artikel-be" element={<ArtikelBE />} />
           <Route path="/faq-be" element={<FAQBE />} />
           <Route path="/lowongan-be" element={<LowonganBE />} />
-          <Route path="/testimoni-be" element={<TestimoniBE />} /> 
+          <Route path="/testimoni-be" element={<TestimoniBE />} />
+          <Route path="/contactus-be" element={<ContactUsBE />} /> 
         </Route>
         {/* Error Pages */}
         <Route path="/ErrorPage400" element={<ErrorPage400 />} />
