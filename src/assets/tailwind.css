@@ -9,7 +9,8 @@
     cupcake,
     sunset,
     retro,
-    dracula
+    dracula, 
+    blockquote
   ;
 }
 
@@ -52,4 +53,6 @@
 
 body {
   @apply font-barlow;
+  background-color: #0b1120; /* warna sesuai screenshot */
+  color: white;
 }

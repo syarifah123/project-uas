@@ -19,10 +19,11 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 import ListMenu from "./ListMenu.jsx";
 export default function Sidebar() {
   return (
-    <div
-      id="sidebar"
-      className="flex min-h-screen w-90 flex-col bg-base-100 p-10 shadow-lg"
-    >
+<div
+  id="sidebar"
+  className="flex min-h-screen w-72 flex-col bg-gradient-to-b from-[#1B1B2F] via-[#1c1f4a] to-[#1B1B2F] text-gray-400 p-6 shadow-lg rounded-tr-3xl rounded-br-3xl"
+>
+        
       {/* Logo */}
       <div id="sidebar-logo" className="flex flex-col">
         <span

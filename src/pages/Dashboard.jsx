@@ -4,7 +4,7 @@ import Chart from "react-apexcharts";
 
 export default function Dashboard() {
   return (
-    <div id="dashboard-container">
+<div id="dashboard-container" >
       <PageHeader
         title={<span className="dark:text-white">Statika Grafik Penjualan</span>}
         breadcrumb={["Admin Panel Kuliner"]}
@@ -179,7 +179,7 @@ export default function Dashboard() {
             height={300}
           />
         </div>
-          {/* Grafik Bar Chart 2 */}
+        {/* Grafik Bar Chart 2 */}
         <div className="bg-base-100 dark:text-white rounded-2xl p-5">
           <h3 className="text-lg font-bold mb-1">Monthly Orders</h3>
           <p className="text-sm text-gray-400 mb-5">Periode: jul - des</p>
