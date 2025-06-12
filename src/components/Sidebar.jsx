@@ -21,20 +21,20 @@ export default function Sidebar() {
   return (
     <div
       id="sidebar"
-      className="flex min-h-screen w-90 flex-col bg-[#1C1F4A] p-10 shadow-lg"
+      className="flex min-h-screen w-90 flex-col bg-base-100 p-10 shadow-lg"
     >
       {/* Logo */}
       <div id="sidebar-logo" className="flex flex-col">
         <span
           id="logo-title"
-          className="font-poppins text-[48px] text-white
+          className="font-poppins text-[48px] dark:text-white
                 -900"
         >
           KulinerKita
         </span>
         <span
           id="logo-subtitle"
-          className=" font-barlow font-semibold text-white
+          className=" font-barlow font-semibold dark:text-white
                 -400"
         >
           {" "}

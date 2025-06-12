@@ -47,37 +47,37 @@ export default function FAQBE() {
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  try {
-    setLoading(true);
-    setError("");
-    setSuccess("");
+    try {
+      setLoading(true);
+      setError("");
+      setSuccess("");
 
-    if (editId) {
-      // MODE UPDATE
-      await faqAPI.updateNote(editId, dataForm);
-      setSuccess("FAQ berhasil diperbarui!");
-    } else {
-      // MODE TAMBAH
-      await faqAPI.createNote(dataForm);
-      setSuccess("FAQ berhasil ditambahkan!");
+      if (editId) {
+        // MODE UPDATE
+        await faqAPI.updateNote(editId, dataForm);
+        setSuccess("FAQ berhasil diperbarui!");
+      } else {
+        // MODE TAMBAH
+        await faqAPI.createNote(dataForm);
+        setSuccess("FAQ berhasil ditambahkan!");
+      }
+
+      // Reset form & edit mode
+      setDataForm({ pertanyaan: "", jawaban: "" });
+      setEditId(null);
+
+      // Refresh data
+      await loadNotes();
+
+      setTimeout(() => setSuccess(""), 3000);
+    } catch (err) {
+      setError(`Terjadi kesalahan: ${err.message}`);
+    } finally {
+      setLoading(false);
     }
-
-    // Reset form & edit mode
-    setDataForm({ pertanyaan: "", jawaban: "" });
-    setEditId(null);
-
-    // Refresh data
-    await loadNotes();
-
-    setTimeout(() => setSuccess(""), 3000);
-  } catch (err) {
-    setError(`Terjadi kesalahan: ${err.message}`);
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
   const handleDelete = async (id) => {
     const konfirmasi = confirm("Yakin ingin menghapus FAQ ini?");
@@ -93,22 +93,22 @@ export default function FAQBE() {
       // Refresh data
       loadNotes();
     } catch (err) {
-     setError(`Terjadi kesalahan: ${err.message}`);
+      setError(`Terjadi kesalahan: ${err.message}`);
     } finally {
       setLoading(false);
     }
   };
 
   const handleEdit = (id) => {
-  const noteToEdit = items.find(note => note.id === id);
-  if (noteToEdit) {
-    setDataForm({
-      pertanyaan: noteToEdit.pertanyaan,
-      jawaban: noteToEdit.jawaban,
-    });
-    setEditId(id); // Menyimpan ID yang sedang diedit
-  }
-};
+    const noteToEdit = items.find(note => note.id === id);
+    if (noteToEdit) {
+      setDataForm({
+        pertanyaan: noteToEdit.pertanyaan,
+        jawaban: noteToEdit.jawaban,
+      });
+      setEditId(id); // Menyimpan ID yang sedang diedit
+    }
+  };
 
   return (
     <div className="max-w-5xl mx-auto p-6">
@@ -117,8 +117,8 @@ export default function FAQBE() {
       </div>
 
       {/* Form Card */}
-      <div className="bg-white rounded-2xl shadow-lg p-6">
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">
+      <div className="bg-base-100 rounded-2xl shadow-lg p-6">
+        <h3 className="text-lg font-semibold mb-4">
           Tambah FAQ Baru
         </h3>
 
@@ -145,7 +145,7 @@ export default function FAQBE() {
             onChange={handleChange}
             disabled={loading}
             required
-            className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
+            className="w-full p-3 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
           />
           <textarea
             name="jawaban"
@@ -155,19 +155,19 @@ export default function FAQBE() {
             disabled={loading}
             required
             rows="2"
-            className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
+            className="w-full p-3 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
           />
 
           <button
             type="submit"
-            className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg"
+            className="px-6 py-3 bg-warning hover:bg-emerald-700 text-white font-semibold rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg"
           >
             {loading ? "Mohon Tunggu..." : "Tambah Data"}
           </button>
         </form>
 
         {/* FAQBE Table */}
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden mt-10">
+        <div className="rounded-2xl shadow-lg overflow-hidden mt-10">
           <div className="px-6 py-4 ">
             <h3 className="text-lg font-semibold">
               Daftar FAQ ({items.length})
@@ -194,7 +194,7 @@ export default function FAQBE() {
                     {index + 1}.
                   </td>
                   <td className="px-6 py-4">
-                    <div className="font-semibold text-emerald-600">
+                    <div className="font-semibold text-warning">
                       {note.pertanyaan}
                     </div>
                   </td>

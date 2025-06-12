@@ -59,21 +59,21 @@ export default function Header() {
           id="search-input"
           type="text"
           placeholder="Search"
-          className="bg-[#2C2E4A] text-white placeholder-white/70 w-full py-2 pl-10 pr-4 rounded-md focus:outline-none"
+          className="bg-base-100 dark:text-white dark:placeholder-white/70 w-full py-2 pl-10 pr-4 rounded-md focus:outline-none"
         />
-        <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/80" />
+        <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 dark:text-white/80" />
       </div>
       {/* Icon & Profile Section */}
       <div id="icons-container" className="flex items-center space-x-4">
         <HeaderMenuItem
           id="notification-icon"
-          icon={<FaBell />}
-          color="bg-yellow-100"
+          icon={<FaBell className="text-warning"/>}
+          // color="bg-yellow-100"
         />
         <HeaderMenuItem
           id="comment"
-          icon={<AiOutlineComment />}
-          color="bg-yellow-100"
+          icon={<AiOutlineComment className="text-warning" />}
+          // color="bg-yellow-100"
         />
 
         {/* Profile Section */}

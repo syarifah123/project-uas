@@ -6,7 +6,7 @@ export default function Dashboard() {
   return (
     <div id="dashboard-container">
       <PageHeader
-        title={<span className="text-white">Statika Grafik Penjualan</span>}
+        title={<span className="dark:text-white">Statika Grafik Penjualan</span>}
         breadcrumb={["Admin Panel Kuliner"]}
       />
 
@@ -45,7 +45,7 @@ export default function Dashboard() {
       <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 px-5 pb-5">
         {/* Kotak Inbox dan Activity */}
         <div className="space-y-4">
-          <div className="bg-[#15193E] rounded-2xl text-white p-5">
+          <div className="bg-base-100 rounded-2xl dark:text-white p-5">
             <div className="flex justify-between items-center mb-3">
               <div>
                 <p className="text-lg font-bold">Inbox</p>
@@ -67,7 +67,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="bg-[#15193E] rounded-2xl text-white p-5">
+          <div className="bg-base-100 rounded-2xl dark:text-white p-5">
             <div className="flex justify-between items-center mb-3">
               <p className="text-lg font-bold">Recent Activity</p>
               <a href="#" className="text-indigo-400 text-sm">
@@ -98,7 +98,7 @@ export default function Dashboard() {
                   <div className="w-3 h-3 rounded-full border border-white"></div>
                   <span>Create new order</span>
                 </div>
-                <span className="bg-emerald-500 text-white text-xs font-bold px-2 py-1 rounded">
+                <span className="bg-emerald-500 dark:text-white text-xs font-bold px-2 py-1 rounded">
                   NEW
                 </span>
               </li>
@@ -116,7 +116,7 @@ export default function Dashboard() {
         </div>
 
         {/* Grafik Sales */}
-        <div className="bg-[#15193E] text-white rounded-2xl p-5">
+        <div className="bg-base-100 dark:text-white rounded-2xl p-5">
           <h3 className="text-lg font-bold mb-1">Today's Sales</h3>
           <p className="text-sm text-gray-400 mb-5">30 Sept 2021</p>
           <Chart
@@ -156,7 +156,7 @@ export default function Dashboard() {
           />
         </div>
         {/* Grafik Bar Chart 1 */}
-        <div className="bg-[#15193E] text-white rounded-2xl p-5">
+        <div className="bg-base-100 dark:text-white rounded-2xl p-5">
           <h3 className="text-lg font-bold mb-1">Monthly Orders</h3>
           <p className="text-sm text-gray-400 mb-5">Periode: Jan - Jun</p>
           <Chart
@@ -180,7 +180,7 @@ export default function Dashboard() {
           />
         </div>
           {/* Grafik Bar Chart 2 */}
-        <div className="bg-[#15193E] text-white rounded-2xl p-5">
+        <div className="bg-base-100 dark:text-white rounded-2xl p-5">
           <h3 className="text-lg font-bold mb-1">Monthly Orders</h3>
           <p className="text-sm text-gray-400 mb-5">Periode: jul - des</p>
           <Chart

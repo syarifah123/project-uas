@@ -115,12 +115,12 @@ export default function ContactUsBE() {
   return (
     <div className="max-w-5xl mx-auto p-6">
       <div className="mb-6">
-        <h2 className="text-3xl font-bold text-white mb-2">Contact Us</h2>
+        <h2 className="text-3xl font-bold mb-2">Contact Us</h2>
       </div>
 
       {/* Form Card */}
-      <div className="bg-white rounded-2xl shadow-lg p-6">
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">
+      <div className="bg-base-100 rounded-2xl shadow-lg p-6">
+        <h3 className="text-lg font-semibold mb-4">
           Tambah Contact Us Baru
         </h3>
 
@@ -147,7 +147,7 @@ export default function ContactUsBE() {
             onChange={handleChange}
             disabled={loading}
             required
-            className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
+            className="w-full p-3 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
           />
           <input
             type="text"
@@ -157,7 +157,7 @@ export default function ContactUsBE() {
             onChange={handleChange}
             disabled={loading}
             required
-            className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
+            className="w-full p-3 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
           />
           <input
             type="text"
@@ -167,19 +167,19 @@ export default function ContactUsBE() {
             onChange={handleChange}
             disabled={loading}
             required
-            className="w-full p-3 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
+            className="w-full p-3 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
           />
 
           <button
             type="submit"
-            className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg"
+            className="px-6 py-3 bg-warning hover:bg-emerald-700 text-white font-semibold rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg"
           >
             {loading ? "Mohon Tunggu..." : "Tambah Data"}
           </button>
         </form>
 
         {/* ContactUsBE Table */}
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden mt-10">
+        <div className="rounded-2xl shadow-lg overflow-hidden mt-10">
           <div className="px-6 py-4 ">
             <h3 className="text-lg font-semibold">
               Daftar Contact Us ({items.length})
@@ -206,7 +206,7 @@ export default function ContactUsBE() {
                     {index + 1}.
                   </td>
                   <td className="px-6 py-4">
-                    <div className="font-semibold text-emerald-600">
+                    <div className="font-semibold text-warning">
                       {note.nama}
                     </div>
                   </td>
@@ -214,7 +214,7 @@ export default function ContactUsBE() {
                     <div className="truncate text-gray-600">{note.email}</div>
                   </td>
                   <td className="px-6 py-4">
-                    <div className="font-semibold text-emerald-600">
+                    <div className="font-semibold text-warning">
                       {note.pesan}
                     </div>
                   </td>

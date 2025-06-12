@@ -3,6 +3,16 @@
 @tailwind utilities; */
 
 @import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark,
+    cupcake,
+    sunset,
+    retro,
+    dracula,
+  ;
+}
+
 /* @font-face {
   font-family: 'Barlow';
   src: url('/fonts/Barlow-Regular.ttf') format('truetype');
@@ -26,20 +36,20 @@
 
 
 @theme {
-    --font-barlow: "Barlow", sans-serif;
-    --font-poppins: 'Poppins', sans-serif;
-    --font-poppins-extrabold: "Poppins-ExtraBold", sans-serif;
-    	
-    --color-latar: #f3f4f6;
-    --color-teks: #374151; 
-    --color-teks-samping: #6b7280;
-    --color-garis: #e5e7eb; 
-    --color-hijau: #00B074; 
-    --color-merah: #ef4444; 
-    --color-biru: #3b82f6;
-    --color-kuning: #f59e0b; 
+  --font-barlow: "Barlow", sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-poppins-extrabold: "Poppins-ExtraBold", sans-serif;
+
+  --color-latar: #f3f4f6;
+  --color-teks: #374151;
+  --color-teks-samping: #6b7280;
+  --color-garis: #e5e7eb;
+  --color-hijau: #00B074;
+  --color-merah: #ef4444;
+  --color-biru: #3b82f6;
+  --color-kuning: #f59e0b;
 }
 
 body {
-    @apply font-barlow;
+  @apply font-barlow;
 }
