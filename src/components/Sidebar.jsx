@@ -19,11 +19,11 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 import ListMenu from "./ListMenu.jsx";
 export default function Sidebar() {
   return (
-<div
-  id="sidebar"
-  className="flex min-h-screen w-72 flex-col bg-gradient-to-b from-[#1B1B2F] via-[#1c1f4a] to-[#1B1B2F] text-gray-400 p-6 shadow-lg rounded-tr-3xl rounded-br-3xl"
->
-        
+    <div
+      id="sidebar"
+      className="flex min-h-screen w-72 flex-col bg-gradient-to-b from-[#1B1B2F] via-[#1c1f4a] to-[#1B1B2F] text-gray-400 p-6 shadow-lg rounded-tr-3xl rounded-br-3xl"
+    >
+
       {/* Logo */}
       <div id="sidebar-logo" className="flex flex-col">
         <span
@@ -53,137 +53,241 @@ export default function Sidebar() {
             isActive
             to="/"
           />
-          <ListMenu
-            id="menu-2"
-            icon={<BiCartAdd />}
-            label="Produk"
-            to="produk"
-          />
-          <ListMenu
-            id="menu-3"
-            icon={<BiText />}
-            label="Artikel"
-            to="artikel"
-          />
-          <ListMenu
-            id="menu-4"
-            icon={<FaQuestionCircle />}
-            label="FAQ"
-            to="faq"
-          />
-          <ListMenu
-            id="menu-5"
-            icon={<BsPerson />}
-            label="Karyawan"
-            to="karyawan"
-          />
-          <ListMenu
-            id="menu-6"
-            icon={<CgWorkAlt />}
-            label="Lowongan Kerja"
-            to="lowongan-kerja"
-          />
-          <ListMenu
-            id="menu-7"
-            icon={<BsFillChatLeftQuoteFill />}
-            label="Testimoni"
-            to="testimoni"
-          />
-          <ListMenu
-            id="menu-8"
-            icon={<BsFillBookmarksFill />}
-            label="Booking"
-            to="booking"
-          />
-          <ListMenu
-            id="menu-9"
-            to="/UserList"
-            icon={<BiUser />}
-            label="List User"
-          />
+          <li className="relative group">
+            <div className="flex items-center gap-3 cursor-pointer px-4 py-2 rounded-md hover:bg-[#23235a] transition-colors">
+              <BiCartAdd className="text-xl" />
+              <span>Json Pages</span>
+              <svg
+                className="ml-auto w-4 h-4 transition-transform group-hover:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <ul className="absolute left-0 mt-0 w-56 bg-[#23235a] rounded-md shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all z-10">
+              <li>
+                <ListMenu
+                  id="menu-2"
+                  icon={<BiCartAdd />}
+                  label="Produk"
+                  to="produk"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-3"
+                  icon={<BiText />}
+                  label="Artikel"
+                  to="artikel"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-4"
+                  icon={<FaQuestionCircle />}
+                  label="FAQ"
+                  to="faq"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-5"
+                  icon={<BsPerson />}
+                  label="Karyawan"
+                  to="karyawan"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-6"
+                  icon={<CgWorkAlt />}
+                  label="Lowongan Kerja"
+                  to="lowongan-kerja"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-7"
+                  icon={<BsFillChatLeftQuoteFill />}
+                  label="Testimoni"
+                  to="testimoni"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-8"
+                  icon={<BsFillBookmarksFill />}
+                  label="Booking"
+                  to="booking"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-9"
+                  to="/UserList"
+                  icon={<BiUser />}
+                  label="List User"
+                />
+              </li>
+            </ul>
+          </li>
+          <hr className="border-t border-gray-300 mx-2" />
+          {/* Dropdown Error Menu */}
+          <li className="relative group">
+            <div className="flex items-center gap-3 cursor-pointer px-4 py-2 rounded-md hover:bg-[#23235a] transition-colors">
+              <BiError className="text-xl" />
+              <span>Error Pages</span>
+              <svg
+                className="ml-auto w-4 h-4 transition-transform group-hover:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <ul className="absolute left-0 mt-0 w-56 bg-[#23235a] rounded-md shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all z-10">
+              <li>
+                <ListMenu
+                  id="menu-10"
+                  to="/ErrorPage400"
+                  icon={<BiCommentError />}
+                  label="ErrorPage400"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-11"
+                  to="/ErrorPage401"
+                  icon={<BiErrorAlt />}
+                  label="ErrorPage401"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-12"
+                  to="/ErrorPage403"
+                  icon={<BiError />}
+                  label="ErrorPage403"
+                />
+              </li>
+            </ul>
+          </li>
+          <hr className="border-t border-gray-300 mx-2" />
+          { /* dummyjson */}
+          <li className="relative group">
+            <div className="flex items-center gap-3 cursor-pointer px-4 py-2 rounded-md hover:bg-[#23235a] transition-colors">
+              <BsFillChatLeftTextFill className="text-xl" />
+              <span>DummyJson Pages</span>
+              <svg
+                className="ml-auto w-4 h-4 transition-transform group-hover:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <ul className="absolute left-0 mt-0 w-56 bg-[#23235a] rounded-md shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all z-10">
+              <li>
+                <ListMenu
+                  id="menu-13"
+                  to="/products"
+                  icon={<MdFastfood />}
+                  label="Products"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-14"
+                  to="/advice"
+                  icon={<BsFillChatLeftTextFill />}
+                  label="Advice"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-15"
+                  to="/quotes"
+                  icon={<ImQuotesLeft />}
+                  label="Quotes"
+                />
+              </li>
+            </ul>
+          </li>
+
+          {/* Divider */}
+          <hr className="border-t border-gray-300 mx-2" />
+          <li className="relative group">
+            <div className="flex items-center gap-3 cursor-pointer px-4 py-2 rounded-md hover:bg-[#23235a] transition-colors">
+              <MdFastfood className="text-xl" />
+              <span>Supabase Pages</span>
+              <svg
+                className="ml-auto w-4 h-4 transition-transform group-hover:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+            <ul className="absolute left-0 mt-0 w-56 bg-[#23235a] rounded-md shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all z-10">
+              <li>
+                <ListMenu
+                  id="menu-16"
+                  to="/produk-be"
+                  icon={<MdFastfood />}
+                  label="Produk"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-17"
+                  to="/artikel-be"
+                  icon={<BsFillChatLeftTextFill />}
+                  label="Artikel"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-18"
+                  to="/faq-be"
+                  icon={<FaQuestionCircle />}
+                  label="FAQ"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-19"
+                  to="/lowongan-be"
+                  icon={<CgWorkAlt />}
+                  label="Lowongan Kerja"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-20"
+                  to="/testimoni-be"
+                  icon={<CgWorkAlt />}
+                  label="Testimoni"
+                />
+              </li>
+              <li>
+                <ListMenu
+                  id="menu-21"
+                  to="/contactus-be"
+                  icon={<CgWorkAlt />}
+                  label="Contact Us"
+                />
+              </li>
+            </ul>
+          </li>
           {/* Divider */}
           <hr className="border-t border-gray-300 mx-2" />
 
-          <ListMenu
-            id="menu-10"
-            to="/ErrorPage400"
-            icon={<BiCommentError />}
-            label="ErrorPage400"
-          />
-          <ListMenu
-            id="menu-11"
-            to="/ErrorPage401"
-            icon={<BiErrorAlt />}
-            label="ErrorPage401"
-          />
-          <ListMenu
-            id="menu-1"
-            to="/ErrorPage403"
-            icon={<BiError />}
-            label="ErrorPage403"
-          />
-          {/* Divider */}
-          <hr className="border-t border-gray-300 mx-2" />
-          <ListMenu
-            id="menu-13"
-            to="/products"
-            icon={<MdFastfood />}
-            label="Products"
-          />
-          <ListMenu
-            id="menu-14"
-            to="/advice"
-            icon={<BsFillChatLeftTextFill />}
-            label="Advice"
-          />
-          <ListMenu
-            id="menu-15"
-            to="/quotes"
-            icon={<ImQuotesLeft />}
-            label="Quotes"
-          />
-          {/* Divider */}
-          <hr className="border-t border-gray-300 mx-2" />
-          <ListMenu
-            id="menu-16"
-            to="/produk-be"
-            icon={<MdFastfood />}
-            label="Produk"
-          />
-          <ListMenu
-            id="menu-17"
-            to="/artikel-be"
-            icon={<BsFillChatLeftTextFill />}
-            label="Artikel"
-          />
-          <ListMenu
-            id="menu-18"
-            to="/faq-be"
-            icon={<FaQuestionCircle />}
-            label="FAQ"
-          />
-          <ListMenu
-            id="menu-19"
-            to="/lowongan-be"
-            icon={<CgWorkAlt />}
-            label="Lowongan Kerja"
-          />
-          <ListMenu
-            id="menu-20"
-            to="/testimoni-be"
-            icon={<CgWorkAlt />}
-            label="Testimoni"
-          />
-          <ListMenu
-            id="menu-21"
-            to="/contactus-be"
-            icon={<CgWorkAlt />}
-            label="Contact Us"
-          />
-          {/* Divider */}
-          <hr className="border-t border-gray-300 mx-2" />
-
-          <ListMenu id="menu-22" to="/Login" icon={<BiLogIn />} label="Login" />
+          <ListMenu id="menu-22" to="/Login" icon={<BiLogIn />} label="Logout" />
         </ul>
       </div>
       {/* Footer */}
@@ -207,6 +311,6 @@ export default function Sidebar() {
           <p className="hover:underline cursor-pointer">Privacy Policy</p>
         </div>
       </div>
-    </div>
+    </div >
   );
 }

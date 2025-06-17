@@ -91,7 +91,7 @@ export default function Login() {
             name="email"
             onChange={handleChange}
             className="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm
-                            placeholder-gray-400"
+                            placeholder-gray-400 text-success"
             placeholder="you@example.com"
           />
         </div>
@@ -105,7 +105,7 @@ export default function Login() {
             name="password"
             onChange={handleChange}
             className="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm
-                            placeholder-gray-400"
+                            placeholder-gray-400 text-success"
             placeholder="********"
           />
         </div>
