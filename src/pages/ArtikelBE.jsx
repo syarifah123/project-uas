@@ -185,41 +185,43 @@ export default function ArtikelBE() {
           )}
 
           {!loading && items.length > 0 ? (
-            <GenericTable
-              columns={["#", "Judul", "Kategori", "Aksi"]} //Tambah Kolom baru
-              data={items}
-              renderRow={(note, index) => (
-                <>
-                  <td className="px-6 py-4 font-medium text-gray-700">
-                    {index + 1}.
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="font-semibold text-warning">
-                      {note.judul}
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 max-w-xs">
-                    <div className="truncate text-gray-600">{note.konten}</div>
-                  </td>
-                  <td className="px-6 py-4 max-w-xs">
-                    <div className="truncate text-gray-600">
-                      <button
-                        onClick={() => handleDelete(note.id)}
-                        disabled={loading}
-                      >
-                        <AiFillDelete className="text-red-400 text-2xl hover:text-red-600 transition-colors" />
-                      </button>
-                      <button
-                        onClick={() => handleEdit(note.id)}
-                        disabled={loading}
-                      >
-                        <AiFillEdit className="text-blue-400 text-2xl hover:text-blue-600 transition-colors" />
-                      </button>
-                    </div>
-                  </td>
-                </>
-              )}
-            />
+            <div className="overflow-x-auto">
+              <GenericTable
+                columns={["#", "Judul", "Kategori", "Aksi"]}
+                data={items}
+                renderRow={(note, index) => (
+                  <>
+                    <td className="px-6 py-4 font-medium text-gray-700 whitespace-nowrap">
+                      {index + 1}.
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="font-semibold text-warning">
+                        {note.judul}
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 max-w-xs">
+                      <div className="truncate text-gray-600">{note.konten}</div>
+                    </td>
+                    <td className="px-6 py-4 max-w-xs">
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => handleDelete(note.id)}
+                          disabled={loading}
+                        >
+                          <AiFillDelete className="text-red-400 text-2xl hover:text-red-600 transition-colors" />
+                        </button>
+                        <button
+                          onClick={() => handleEdit(note.id)}
+                          disabled={loading}
+                        >
+                          <AiFillEdit className="text-blue-400 text-2xl hover:text-blue-600 transition-colors" />
+                        </button>
+                      </div>
+                    </td>
+                  </>
+                )}
+              />
+            </div>
           ) : null}
         </div>
       </div>

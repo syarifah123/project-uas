@@ -111,14 +111,14 @@ export default function FAQBE() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto p-6">
+    <div className="max-w-5xl mx-auto p-4 sm:p-6">
       <div className="mb-6">
-        <h2 className="text-3xl font-bold text-white mb-2">FAQ</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">FAQ</h2>
       </div>
 
       {/* Form Card */}
-      <div className="bg-base-100 rounded-2xl shadow-lg p-6">
-        <h3 className="text-lg font-semibold mb-4">
+      <div className="bg-base-100 rounded-2xl shadow-lg p-4 sm:p-6">
+        <h3 className="text-base sm:text-lg font-semibold mb-4">
           Tambah FAQ Baru
         </h3>
 
@@ -145,7 +145,7 @@ export default function FAQBE() {
             onChange={handleChange}
             disabled={loading}
             required
-            className="w-full p-3 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
+            className="w-full p-3 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base"
           />
           <textarea
             name="jawaban"
@@ -155,21 +155,21 @@ export default function FAQBE() {
             disabled={loading}
             required
             rows="2"
-            className="w-full p-3 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
+            className="w-full p-3 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base"
           />
 
           <button
             type="submit"
-            className="px-6 py-3 bg-warning hover:bg-emerald-700 text-white font-semibold rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg"
+            className="w-full sm:w-auto px-6 py-3 bg-warning hover:bg-emerald-700 text-white font-semibold rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg"
           >
-            {loading ? "Mohon Tunggu..." : "Tambah Data"}
+            {loading ? "Mohon Tunggu..." : (editId ? "Simpan Perubahan" : "Tambah Data")}
           </button>
         </form>
 
         {/* FAQBE Table */}
-        <div className="rounded-2xl shadow-lg overflow-hidden mt-10">
-          <div className="px-6 py-4 ">
-            <h3 className="text-lg font-semibold">
+        <div className="rounded-2xl shadow-lg overflow-x-auto mt-10">
+          <div className="px-4 sm:px-6 py-4">
+            <h3 className="text-base sm:text-lg font-semibold">
               Daftar FAQ ({items.length})
             </h3>
           </div>
@@ -185,41 +185,45 @@ export default function FAQBE() {
           )}
 
           {!loading && items.length > 0 ? (
-            <GenericTable
-              columns={["#", "Pertanyaan", "Jawaban", "Aksi"]} //Tambah Kolom baru
-              data={items}
-              renderRow={(note, index) => (
-                <>
-                  <td className="px-6 py-4 font-medium text-gray-700">
-                    {index + 1}.
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="font-semibold text-warning">
-                      {note.pertanyaan}
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 max-w-xs">
-                    <div className="truncate text-gray-600">{note.jawaban}</div>
-                  </td>
-                  <td className="px-6 py-4 max-w-xs">
-                    <div className="truncate text-gray-600">
-                      <button
-                        onClick={() => handleDelete(note.id)}
-                        disabled={loading}
-                      >
-                        <AiFillDelete className="text-red-400 text-2xl hover:text-red-600 transition-colors" />
-                      </button>
-                      <button
-                        onClick={() => handleEdit(note.id)}
-                        disabled={loading}
-                      >
-                        <AiFillEdit className="text-blue-400 text-2xl hover:text-blue-600 transition-colors" />
-                      </button>
-                    </div>
-                  </td>
-                </>
-              )}
-            />
+            <div className="min-w-[600px] sm:min-w-0">
+              <GenericTable
+                columns={["#", "Pertanyaan", "Jawaban", "Aksi"]}
+                data={items}
+                renderRow={(note, index) => (
+                  <>
+                    <td className="px-4 sm:px-6 py-4 font-medium text-gray-700">
+                      {index + 1}.
+                    </td>
+                    <td className="px-4 sm:px-6 py-4">
+                      <div className="font-semibold text-warning break-words max-w-xs sm:max-w-md">
+                        {note.pertanyaan}
+                      </div>
+                    </td>
+                    <td className="px-4 sm:px-6 py-4 max-w-xs sm:max-w-md">
+                      <div className="truncate text-gray-600">{note.jawaban}</div>
+                    </td>
+                    <td className="px-4 sm:px-6 py-4 max-w-xs">
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => handleDelete(note.id)}
+                          disabled={loading}
+                          aria-label="Hapus"
+                        >
+                          <AiFillDelete className="text-red-400 text-xl sm:text-2xl hover:text-red-600 transition-colors" />
+                        </button>
+                        <button
+                          onClick={() => handleEdit(note.id)}
+                          disabled={loading}
+                          aria-label="Edit"
+                        >
+                          <AiFillEdit className="text-blue-400 text-xl sm:text-2xl hover:text-blue-600 transition-colors" />
+                        </button>
+                      </div>
+                    </td>
+                  </>
+                )}
+              />
+            </div>
           ) : null}
         </div>
       </div>
