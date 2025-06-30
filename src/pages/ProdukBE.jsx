@@ -182,7 +182,6 @@ export default function ProdukBE() {
             className="w-full p-3 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
           />
 
-
           <button
             type="submit"
             className="px-6 py-3 bg-warning hover:bg-emerald-700 text-white font-semibold rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg"
@@ -192,7 +191,7 @@ export default function ProdukBE() {
         </form>
 
         {/* ProdukBE Table */}
-        <div className="rounded-2xl shadow-lg overflow-hidden mt-10">
+        <div className="rounded-2xl shadow-lg overflow-x-auto mt-10">
           <div className="px-6 py-4 ">
             <h3 className="text-lg font-semibold">
               Daftar Produk ({items.length})
@@ -210,56 +209,58 @@ export default function ProdukBE() {
           )}
 
           {!loading && items.length > 0 ? (
-            <GenericTable
-              columns={["#", "Foto", "Nama", "deskripsi", "Harga", "Aksi"]} //Tambah Kolom baru
-              data={items}
-              renderRow={(note, index) => (
-                <>
-                  <td className="px-6 py-4 font-medium text-gray-700">
-                    {index + 1}.
-                  </td>
-                  <td className="px-6 py-4 max-w-xs">
-                    {note.foto ? (
-                      <img
-                        src={note.foto}
-                        alt={note.nama}
-                        className="h-16 w-16 object-cover rounded-lg border"
-                        onError={e => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/64?text=No+Image"; }}
-                      />
-                    ) : (
-                      <span className="text-gray-400 italic">Tidak ada foto</span>
-                    )}
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="font-semibold text-warning">
-                      {note.nama}
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 max-w-xs">
-                    <div className="truncate text-gray-600">{note.deskripsi}</div>
-                  </td>
-                  <td className="px-6 py-4 max-w-xs">
-                    <div className="truncate text-gray-600">{note.harga}</div>
-                  </td>
-                  <td className="px-6 py-4 max-w-xs">
-                    <div className="truncate text-gray-600">
-                      <button
-                        onClick={() => handleDelete(note.id)}
-                        disabled={loading}
-                      >
-                        <AiFillDelete className="text-red-400 text-2xl hover:text-red-600 transition-colors" />
-                      </button>
-                      <button
-                        onClick={() => handleEdit(note.id)}
-                        disabled={loading}
-                      >
-                        <AiFillEdit className="text-blue-400 text-2xl hover:text-blue-600 transition-colors" />
-                      </button>
-                    </div>
-                  </td>
-                </>
-              )}
-            />
+            <div className="w-full overflow-x-auto">
+              <GenericTable
+                columns={["#", "Foto", "Nama", "deskripsi", "Harga", "Aksi"]}
+                data={items}
+                renderRow={(note, index) => (
+                  <>
+                    <td className="px-6 py-4 font-medium text-gray-700 whitespace-nowrap">
+                      {index + 1}.
+                    </td>
+                    <td className="px-6 py-4 max-w-xs whitespace-nowrap">
+                      {note.foto ? (
+                        <img
+                          src={note.foto}
+                          alt={note.nama}
+                          className="h-16 w-16 object-cover rounded-lg border"
+                          onError={e => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/64?text=No+Image"; }}
+                        />
+                      ) : (
+                        <span className="text-gray-400 italic">Tidak ada foto</span>
+                      )}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="font-semibold text-warning">
+                        {note.nama}
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 max-w-xs whitespace-nowrap">
+                      <div className="truncate text-gray-600">{note.deskripsi}</div>
+                    </td>
+                    <td className="px-6 py-4 max-w-xs whitespace-nowrap">
+                      <div className="truncate text-gray-600">{note.harga}</div>
+                    </td>
+                    <td className="px-6 py-4 max-w-xs whitespace-nowrap">
+                      <div className="truncate text-gray-600 flex gap-2">
+                        <button
+                          onClick={() => handleDelete(note.id)}
+                          disabled={loading}
+                        >
+                          <AiFillDelete className="text-red-400 text-2xl hover:text-red-600 transition-colors" />
+                        </button>
+                        <button
+                          onClick={() => handleEdit(note.id)}
+                          disabled={loading}
+                        >
+                          <AiFillEdit className="text-blue-400 text-2xl hover:text-blue-600 transition-colors" />
+                        </button>
+                      </div>
+                    </td>
+                  </>
+                )}
+              />
+            </div>
           ) : null}
         </div>
       </div>
