@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BsFillExclamationDiamondFill } from "react-icons/bs";
 import { ImSpinner2 } from "react-icons/im";
@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function Login() {
   /* navigate, state & handleChange*/
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -44,7 +44,7 @@ export default function Login() {
         }
 
         // Redirect ke dashboard jika login sukses
-        navigate("/");
+        window.location.href = "https://kuliner-kita-hs.vercel.app/";
       })
       .catch((err) => {
         if (err.response) {

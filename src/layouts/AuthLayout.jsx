@@ -23,9 +23,14 @@ export default function AuthLayout() {
                 <div className="flex-1 p-8 flex flex-col justify-center">
                     <div className="flex items-center justify-center mb-6">
                         <h1 className="text-4xl font-poppins font-extrabold text-gray-800">
-                            <span className="text-black">KulinerKita</span>
-
+                            {/* <span className="text-black">KulinerKita</span> */}
                         </h1>
+                            <img
+                                src="/img/kuliner_kita.jpeg"
+                                alt="Logo"
+                                className="w-full h-auto mb-6"
+                                style={{ maxWidth: "50%" }}
+                            />
                     </div>
                     <Outlet />
                     <p className="text-center text-sm text-gray-500 mt-6"></p>
