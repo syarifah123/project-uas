@@ -25,25 +25,31 @@ export default function Sidebar() {
     >
 
       {/* Logo */}
-      <div id="sidebar-logo" className="flex flex-col">
+      <div id="sidebar-logo" className="flex flex-col w-full max-w-full">
         <span
           id="logo-title"
-          className="font-poppins text-[48px] dark:text-white
-                -900"
+          className="font-poppins text-[48px] dark:text-white w-full"
+          style={{ maxWidth: "100%" }}
         >
-          KulinerKita
+          {/* KulinerKita */}
+          <img
+            src="/img/kuliner_kita.jpeg"
+            alt="Logo"
+            className="w-full h-auto mb-6"
+            style={{ maxWidth: "100%" }}
+          />
         </span>
         <span
           id="logo-subtitle"
-          className=" font-barlow font-semibold dark:text-white
-                -400"
+          className="font-barlow font-semibold dark:text-white w-full"
+          style={{ maxWidth: "100%" }}
         >
           {" "}
           Admin Panel Kuliner Kita
         </span>
       </div>
 
-      {/* List menu*/}
+      {/* List menu */}
       <div id="sidebar-menu" className="mt-10">
         <ul id="menu-list" className="space-y-3">
           <ListMenu
