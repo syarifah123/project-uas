@@ -4,8 +4,7 @@ import Chart from "react-apexcharts";
 
 export default function Dashboard() {
   return (
-<div id="dashboard-container" >
-      <PageHeader
+<div id="dashboard-container" className="bg-[#1B1B2F] min-h-screen text-white">      <PageHeader
         title={<span className="dark:text-white">Statika Grafik Penjualan</span>}
         breadcrumb={["Admin Panel Kuliner"]}
       />
